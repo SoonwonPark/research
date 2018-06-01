@@ -1,0 +1,289 @@
+digraph {
+	subgraph SetNamedPipeHandleState {
+		SetNamedPipeHandleState -> "jmp     ds __imp_SetNamedPipeHandleState
+"		 [color=blue];
+	}
+	subgraph StartAddress {
+		StartAddress -> "jnz     short loc_402D95
+"		 [color=blue];
+		"jnz     short loc_402D95
+" -> "jnz     short loc_402D95
+";
+		"jnz     short loc_402D95
+" -> "call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+";
+		"call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+" -> "call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+jmp     loc_402F95
+";
+		"call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+" -> "call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    SetNamedPipeHandleState
+";
+		"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+jmp     loc_402F95
+" -> "retn    4
+";
+		"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    SetNamedPipeHandleState
+" -> "call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+";
+		"retn    4
+" -> StartAddress		 [color=red];
+		"call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+" -> "call    ReadFile
+jbe     short loc_402ED9
+";
+		"call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+" -> "call    GetExitCodeProcess
+jnz     short loc_402F6A
+";
+		"call    ReadFile
+jbe     short loc_402ED9
+" -> "call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+";
+		"call    ReadFile
+jbe     short loc_402ED9
+" -> "call    sub_4031C0
+call    sub_401538
+jmp     short loc_402ED9
+";
+		"call    GetExitCodeProcess
+jnz     short loc_402F6A
+" -> "call    TerminateProcess
+";
+		"call    GetExitCodeProcess
+jnz     short loc_402F6A
+" -> "call    CloseHandle
+call    CloseHandle
+call    sub_4031C0
+";
+		"call    sub_4031C0
+call    sub_401538
+jmp     short loc_402ED9
+" -> "call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+";
+		"call    TerminateProcess
+" -> "call    CloseHandle
+call    CloseHandle
+call    sub_4031C0
+";
+		"call    CloseHandle
+call    CloseHandle
+call    sub_4031C0
+" -> "retn    4
+";
+	}
+	subgraph CreatePipe {
+		CreatePipe -> "jmp     ds __imp_CreatePipe
+"		 [color=blue];
+	}
+	subgraph CloseHandle {
+		CloseHandle -> "jmp     ds __imp_CloseHandle
+"		 [color=blue];
+	}
+	subgraph Sleep {
+		Sleep -> "jmp     ds __imp_Sleep
+"		 [color=blue];
+	}
+	subgraph sub_4031C0 {
+		sub_4031C0 -> "jnz     short loc_4031C9
+"		 [color=blue];
+		"jnz     short loc_4031C9
+" -> "jnz     short loc_4031C9
+";
+		"jnz     short loc_4031C9
+" -> "call    sub_401538
+jle     short loc_403219
+";
+		"call    sub_401538
+jle     short loc_403219
+" -> "jz      short loc_403219
+";
+		"call    sub_401538
+jle     short loc_403219
+" -> "call    send
+jnz     short loc_403249
+";
+		"jz      short loc_403219
+" -> "call    send
+jnz     short loc_403249
+";
+		"jz      short loc_403219
+" -> "call    sub_401510
+";
+		"call    send
+jnz     short loc_403249
+" -> 6;
+		"call    send
+jnz     short loc_403249
+" -> "jz      short loc_40325A
+";
+		"call    sub_401510
+" -> "call    send
+jnz     short loc_403249
+";
+		6 -> "jz      short loc_40325A
+";
+		"jz      short loc_40325A
+" -> "call    GetTickCount
+";
+		"jz      short loc_40325A
+" -> "call    Sleep
+retn    4
+";
+		"call    GetTickCount
+" -> "call    Sleep
+retn    4
+";
+		"call    Sleep
+retn    4
+" -> sub_4031C0		 [color=red];
+	}
+	subgraph ReadFile {
+		ReadFile -> "jmp     ds __imp_ReadFile
+"		 [color=blue];
+	}
+	subgraph sub_401538 {
+		sub_401538 -> "call    sub_401518
+retn
+"		 [color=blue];
+	}
+	subgraph GetStartupInfoA {
+		GetStartupInfoA -> "jmp     ds __imp_GetStartupInfoA
+"		 [color=blue];
+	}
+	subgraph CreateProcessA {
+		CreateProcessA -> "jmp     ds __imp_CreateProcessA
+"		 [color=blue];
+	}
+	subgraph GetExitCodeProcess {
+		GetExitCodeProcess -> "jmp     ds __imp_GetExitCodeProcess
+"		 [color=blue];
+		GetExitCodeProcess -> "jmp     ds __imp_GetExitCodeProcess
+"		 [color=blue];
+	}
+	subgraph TerminateProcess {
+		TerminateProcess -> "jmp     ds __imp_TerminateProcess
+"		 [color=blue];
+	}
+	"call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+" -> CreatePipe	 [color=purple];
+	"call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+" -> GetStartupInfoA	 [color=purple];
+	"call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+" -> CreateProcessA	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+jmp     loc_402F95
+" -> CloseHandle	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+jmp     loc_402F95
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    SetNamedPipeHandleState
+" -> CloseHandle	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    SetNamedPipeHandleState
+" -> SetNamedPipeHandleState	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    SetNamedPipeHandleState
+" -> sub_4031C0	 [color=purple];
+	"call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+" -> Sleep	 [color=purple];
+	"call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+" -> GetExitCodeProcess	 [color=purple];
+	"call    ReadFile
+jbe     short loc_402ED9
+" -> ReadFile	 [color=purple];
+	"call    GetExitCodeProcess
+jnz     short loc_402F6A
+" -> GetExitCodeProcess	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+jmp     short loc_402ED9
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+jmp     short loc_402ED9
+" -> sub_401538	 [color=purple];
+	"call    TerminateProcess
+" -> TerminateProcess	 [color=purple];
+	"call    CloseHandle
+call    CloseHandle
+call    sub_4031C0
+" -> CloseHandle	 [color=purple];
+	"call    CloseHandle
+call    CloseHandle
+call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_401538
+jle     short loc_403219
+" -> sub_401538	 [color=purple];
+	"call    Sleep
+retn    4
+" -> Sleep	 [color=purple];
+}

@@ -1,0 +1,7552 @@
+digraph {
+	subgraph GetModuleFileNameW {
+		GetModuleFileNameW -> "jmp     ds __imp_GetModuleFileNameW
+"		 [color=blue];
+	}
+	subgraph OutputDebugStringA {
+		OutputDebugStringA -> "jmp     ds __imp_OutputDebugStringA
+"		 [color=blue];
+	}
+	subgraph FindResourceA {
+		FindResourceA -> "jmp     ds __imp_FindResourceA
+"		 [color=blue];
+	}
+	subgraph SizeofResource {
+		SizeofResource -> "jmp     ds __imp_SizeofResource
+"		 [color=blue];
+	}
+	subgraph VirtualProtect {
+		VirtualProtect -> "jmp     ds __imp_VirtualProtect
+"		 [color=blue];
+	}
+	subgraph GetExitCodeProcess {
+		GetExitCodeProcess -> "jmp     ds __imp_GetExitCodeProcess
+"		 [color=blue];
+	}
+	subgraph gethostbyname {
+		gethostbyname -> "jmp     ds __imp_gethostbyname
+"		 [color=blue];
+	}
+	subgraph GetComputerNameW {
+		GetComputerNameW -> "jmp     ds __imp_GetComputerNameW
+"		 [color=blue];
+	}
+	subgraph RegDeleteKeyW {
+		RegDeleteKeyW -> "jmp     ds __imp_RegDeleteKeyW
+"		 [color=blue];
+	}
+	subgraph RegDeleteValueW {
+		RegDeleteValueW -> "jmp     ds __imp_RegDeleteValueW
+"		 [color=blue];
+	}
+	subgraph IsWindowVisible {
+		IsWindowVisible -> "jmp     ds __imp_IsWindowVisible
+"		 [color=blue];
+	}
+	subgraph GetWindowTextW {
+		GetWindowTextW -> "jmp     ds __imp_GetWindowTextW
+"		 [color=blue];
+	}
+	subgraph GetWindowPlacement {
+		GetWindowPlacement -> "jmp     ds __imp_GetWindowPlacement
+"		 [color=blue];
+	}
+	subgraph GetLocaleInfoW {
+		GetLocaleInfoW -> "jmp     ds __imp_GetLocaleInfoW
+"		 [color=blue];
+	}
+	subgraph GetStartupInfoA {
+		GetStartupInfoA -> "jmp     ds __imp_GetStartupInfoA
+"		 [color=blue];
+	}
+	subgraph CreateProcessA {
+		CreateProcessA -> "jmp     ds __imp_CreateProcessA
+"		 [color=blue];
+	}
+	subgraph OpenSCManagerW {
+		OpenSCManagerW -> "jmp     ds __imp_OpenSCManagerW
+"		 [color=blue];
+	}
+	subgraph EnumServicesStatusW {
+		EnumServicesStatusW -> "jmp     ds __imp_EnumServicesStatusW
+"		 [color=blue];
+	}
+	subgraph CloseServiceHandle {
+		CloseServiceHandle -> "jmp     ds __imp_CloseServiceHandle
+"		 [color=blue];
+	}
+	subgraph GetForegroundWindow {
+		GetForegroundWindow -> "jmp     ds __imp_GetForegroundWindow
+"		 [color=blue];
+	}
+	subgraph GetDiskFreeSpaceExW {
+		GetDiskFreeSpaceExW -> "jmp     ds __imp_GetDiskFreeSpaceExW
+"		 [color=blue];
+	}
+	subgraph QueryServiceStatus {
+		QueryServiceStatus -> "jmp     ds __imp_QueryServiceStatus
+"		 [color=blue];
+	}
+	subgraph StartServiceW {
+		StartServiceW -> "jmp     ds __imp_StartServiceW
+"		 [color=blue];
+	}
+	subgraph ControlService {
+		ControlService -> "jmp     ds __imp_ControlService
+"		 [color=blue];
+	}
+	subgraph RegEnumValueA {
+		RegEnumValueA -> "jmp     ds __imp_RegEnumValueA
+"		 [color=blue];
+	}
+	subgraph SetNamedPipeHandleState {
+		SetNamedPipeHandleState -> "jmp     ds __imp_SetNamedPipeHandleState
+"		 [color=blue];
+	}
+	subgraph GetServiceDisplayNameW {
+		GetServiceDisplayNameW -> "jmp     ds __imp_GetServiceDisplayNameW
+"		 [color=blue];
+	}
+	subgraph recv {
+		recv -> "jmp     ds __imp_recv
+"		 [color=blue];
+	}
+	subgraph GetLogicalDriveStringsW {
+		GetLogicalDriveStringsW -> "jmp     ds __imp_GetLogicalDriveStringsW
+"		 [color=blue];
+	}
+	subgraph StartAddress {
+		StartAddress -> "jnz     short loc_402D95
+"		 [color=blue];
+		"jnz     short loc_402D95
+" -> "jnz     short loc_402D95
+";
+		"jnz     short loc_402D95
+" -> "call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+";
+		"call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+" -> "call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+jmp     loc_402F95
+";
+		"call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+" -> "call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    SetNamedPipeHandleState
+";
+		"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+jmp     loc_402F95
+" -> "retn    4
+";
+		"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    SetNamedPipeHandleState
+" -> "call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+";
+		"retn    4
+" -> StartAddress		 [color=red];
+		"call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+" -> "call    ReadFile
+jbe     short loc_402ED9
+";
+		"call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+" -> "call    GetExitCodeProcess
+jnz     short loc_402F6A
+";
+		"call    ReadFile
+jbe     short loc_402ED9
+" -> "call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+";
+		"call    ReadFile
+jbe     short loc_402ED9
+" -> "call    sub_4031C0
+call    sub_401538
+jmp     short loc_402ED9
+";
+		"call    GetExitCodeProcess
+jnz     short loc_402F6A
+" -> "call    TerminateProcess
+";
+		"call    GetExitCodeProcess
+jnz     short loc_402F6A
+" -> "call    CloseHandle
+call    CloseHandle
+call    sub_4031C0
+";
+		"call    sub_4031C0
+call    sub_401538
+jmp     short loc_402ED9
+" -> "call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+";
+		"call    TerminateProcess
+" -> "call    CloseHandle
+call    CloseHandle
+call    sub_4031C0
+";
+		"call    CloseHandle
+call    CloseHandle
+call    sub_4031C0
+" -> "retn    4
+";
+	}
+	subgraph sub_405BE4 {
+		sub_405BE4 -> "call    LoadLibraryA
+jnb     short loc_405C0C
+"		 [color=blue];
+		sub_405BE4 -> retn		 [color=blue];
+		"call    LoadLibraryA
+jnb     short loc_405C0C
+" -> retn;
+		"call    LoadLibraryA
+jnb     short loc_405C0C
+" -> "call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+";
+		retn -> sub_405BE4		 [color=red];
+		"call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+" -> retn;
+	}
+	subgraph keybd_event {
+		keybd_event -> "jmp     ds __imp_keybd_event
+"		 [color=blue];
+	}
+	subgraph sub_4031C0 {
+		sub_4031C0 -> "jnz     short loc_4031C9
+"		 [color=blue];
+		"jnz     short loc_4031C9
+" -> "jnz     short loc_4031C9
+";
+		"jnz     short loc_4031C9
+" -> "call    sub_401538
+jle     short loc_403219
+";
+		"call    sub_401538
+jle     short loc_403219
+" -> "jz      short loc_403219
+";
+		"call    sub_401538
+jle     short loc_403219
+" -> "call    send
+jnz     short loc_403249
+";
+		"jz      short loc_403219
+" -> "call    send
+jnz     short loc_403249
+";
+		"jz      short loc_403219
+" -> "call    sub_401510
+";
+		"call    send
+jnz     short loc_403249
+" -> 6;
+		"call    send
+jnz     short loc_403249
+" -> "jz      short loc_40325A
+";
+		"call    sub_401510
+" -> "call    send
+jnz     short loc_403249
+";
+		6 -> "jz      short loc_40325A
+";
+		"jz      short loc_40325A
+" -> "call    GetTickCount
+";
+		"jz      short loc_40325A
+" -> "call    Sleep
+retn    4
+";
+		"call    GetTickCount
+" -> "call    Sleep
+retn    4
+";
+		"call    Sleep
+retn    4
+" -> sub_4031C0		 [color=red];
+	}
+	subgraph sub_401538 {
+		sub_401538 -> "call    sub_401518
+retn
+"		 [color=blue];
+	}
+	subgraph sub_401510 {
+		sub_401510 -> "call    sub_4013F8
+retn
+"		 [color=blue];
+	}
+	subgraph GetTickCount {
+		GetTickCount -> "jmp     ds __imp_GetTickCount
+"		 [color=blue];
+	}
+	subgraph Sleep {
+		Sleep -> "jmp     ds __imp_Sleep
+"		 [color=blue];
+	}
+	subgraph wsprintfW {
+		wsprintfW -> "jmp     ds __imp_wsprintfW
+"		 [color=blue];
+	}
+	subgraph lstrcatW {
+		lstrcatW -> "jmp     ds __imp_lstrcatW
+"		 [color=blue];
+	}
+	subgraph lstrlenW {
+		lstrlenW -> "jmp     ds __imp_lstrlenW
+"		 [color=blue];
+	}
+	subgraph sub_4013F8 {
+		retn -> sub_4013F8		 [color=red];
+		sub_4013F8 -> "jz      short loc_401435
+"		 [color=blue];
+		sub_4013F8 -> "js      short loc_401435
+"		 [color=blue];
+		"jz      short loc_401435
+" -> retn;
+		"jz      short loc_401435
+" -> "js      short loc_401435
+";
+		"js      short loc_401435
+" -> retn;
+		"js      short loc_401435
+" -> retn;
+		"js      short loc_401435
+" -> retn;
+		"js      short loc_401435
+" -> 5;
+		5 -> retn;
+	}
+	subgraph sub_4025E4 {
+		retn -> sub_4025E4		 [color=red];
+		sub_4025E4 -> retn		 [color=blue];
+		sub_4025E4 -> "jl      short loc_402614
+"		 [color=blue];
+		"jl      short loc_402614
+" -> retn;
+		"jl      short loc_402614
+" -> 2;
+		2 -> "jnz     short loc_40260D
+";
+		"jnz     short loc_40260D
+" -> "jmp     short loc_402614
+";
+		"jnz     short loc_40260D
+" -> "jnz     short loc_402601
+";
+		"jmp     short loc_402614
+" -> retn;
+		"jnz     short loc_402601
+" -> retn;
+		"jnz     short loc_402601
+" -> "jnz     short loc_40260D
+";
+	}
+	subgraph sub_4014B4 {
+		sub_4014B4 -> "call    VirtualAlloc
+retn
+"		 [color=blue];
+	}
+	subgraph sub_401D50 {
+		retn -> sub_401D50		 [color=red];
+		sub_401D50 -> retn		 [color=blue];
+		sub_401D50 -> retn		 [color=blue];
+	}
+	subgraph StrToIntW {
+		StrToIntW -> "jmp     ds __imp_StrToIntW
+"		 [color=blue];
+	}
+	subgraph CreateDirectoryW {
+		CreateDirectoryW -> "jmp     ds __imp_CreateDirectoryW
+"		 [color=blue];
+	}
+	subgraph GetDriveTypeW {
+		GetDriveTypeW -> "jmp     ds __imp_GetDriveTypeW
+"		 [color=blue];
+	}
+	subgraph ShellExecuteW {
+		ShellExecuteW -> "jmp     ds __imp_ShellExecuteW
+"		 [color=blue];
+	}
+	subgraph GetModuleHandleA {
+		GetModuleHandleA -> "jmp     ds __imp_GetModuleHandleA
+"		 [color=blue];
+	}
+	subgraph GetProcAddress {
+		GetProcAddress -> "jmp     ds __imp_GetProcAddress
+"		 [color=blue];
+	}
+	subgraph GetCurrentProcess {
+		GetCurrentProcess -> "jmp     ds __imp_GetCurrentProcess
+"		 [color=blue];
+	}
+	subgraph ExitProcess_0 {
+		ExitProcess_0 -> "jmp     ds __imp_ExitProcess_0
+"		 [color=blue];
+	}
+	subgraph OutputDebugStringA_0 {
+		OutputDebugStringA_0 -> "jmp     ds __imp_OutputDebugStringA
+"		 [color=blue];
+	}
+	subgraph GetLastInputInfo {
+		GetLastInputInfo -> "jmp     ds __imp_GetLastInputInfo
+"		 [color=blue];
+	}
+	subgraph GetCurrentProcessId {
+		GetCurrentProcessId -> "jmp     ds __imp_GetCurrentProcessId
+"		 [color=blue];
+	}
+	subgraph RegOpenKeyExW {
+		RegOpenKeyExW -> "jmp     ds __imp_RegOpenKeyExW
+"		 [color=blue];
+	}
+	subgraph RegEnumKeyExW {
+		RegEnumKeyExW -> "jmp     ds __imp_RegEnumKeyExW
+"		 [color=blue];
+	}
+	subgraph WideCharToMultiByte {
+		WideCharToMultiByte -> "jmp     ds __imp_WideCharToMultiByte
+"		 [color=blue];
+	}
+	subgraph URLDownloadToFileW {
+		URLDownloadToFileW -> "jmp     ds __imp_URLDownloadToFileW
+"		 [color=blue];
+	}
+	subgraph TerminateThread {
+		TerminateThread -> "jmp     ds __imp_TerminateThread
+"		 [color=blue];
+	}
+	subgraph RegCreateKeyW {
+		RegCreateKeyW -> "jmp     ds __imp_RegCreateKeyW
+"		 [color=blue];
+	}
+	subgraph RegSetValueExW {
+		RegSetValueExW -> "jmp     ds __imp_RegSetValueExW
+"		 [color=blue];
+	}
+	subgraph GetVersionExA {
+		GetVersionExA -> "jmp     ds __imp_GetVersionExA
+"		 [color=blue];
+	}
+	subgraph SHGetFolderPathW {
+		SHGetFolderPathW -> "jmp     ds __imp_SHGetFolderPathW
+"		 [color=blue];
+	}
+	subgraph RegQueryValueExW {
+		RegQueryValueExW -> "jmp     ds __imp_RegQueryValueExW
+"		 [color=blue];
+	}
+	subgraph GetProcessHeap {
+		GetProcessHeap -> "jmp     ds __imp_GetProcessHeap
+"		 [color=blue];
+	}
+	subgraph FindFirstFileW {
+		FindFirstFileW -> "jmp     ds __imp_FindFirstFileW
+"		 [color=blue];
+	}
+	subgraph FindNextFileW {
+		FindNextFileW -> "jmp     ds __imp_FindNextFileW
+"		 [color=blue];
+	}
+	subgraph GetWindowsDirectoryW {
+		GetWindowsDirectoryW -> "jmp     ds __imp_GetWindowsDirectoryW
+"		 [color=blue];
+	}
+	subgraph SHFileOperationW {
+		SHFileOperationW -> "jmp     ds __imp_SHFileOperationW
+"		 [color=blue];
+	}
+	subgraph TerminateProcess {
+		TerminateProcess -> "jmp     ds __imp_TerminateProcess
+"		 [color=blue];
+	}
+	subgraph sub_40522C {
+		sub_40522C -> "call    sub_4031C0
+retn
+"		 [color=blue];
+		sub_40522C -> "call    sub_405008
+retn
+"		 [color=blue];
+	}
+	subgraph sub_404F3C {
+		retn -> sub_404F3C		 [color=red];
+		"call    CloseHandle
+" -> retn;
+		sub_404F3C -> retn		 [color=blue];
+		sub_404F3C -> "jz      loc_405003
+"		 [color=blue];
+		"jz      loc_405003
+" -> retn;
+		"jz      loc_405003
+" -> "call    WriteFile
+jz      short loc_404FBE
+";
+		"call    WriteFile
+jz      short loc_404FBE
+" -> "call    sub_4031C0
+call    CloseHandle
+jmp     short loc_405003
+";
+		"call    WriteFile
+jz      short loc_404FBE
+" -> "call    sub_4031C0
+jnz     short loc_405003
+";
+		"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_405003
+" -> retn;
+		"call    sub_4031C0
+jnz     short loc_405003
+" -> retn;
+		"call    sub_4031C0
+jnz     short loc_405003
+" -> "call    CloseHandle
+";
+	}
+	subgraph sub_403C34 {
+		retn -> sub_403C34		 [color=red];
+		"call    sub_4031C0
+" -> retn;
+		sub_403C34 -> "call    sub_4031C0
+"		 [color=blue];
+		sub_403C34 -> "call    sub_402570
+jz      loc_403CF3
+"		 [color=blue];
+		"call    sub_402570
+jz      loc_403CF3
+" -> retn;
+		"call    sub_402570
+jz      loc_403CF3
+" -> "call    lstrlenW
+call    sub_401448
+jz      short loc_403CA4
+";
+		"call    lstrlenW
+call    sub_401448
+jz      short loc_403CA4
+" -> "call    lstrcpyW
+call    lstrcatW
+jmp     short loc_403CAF
+";
+		"call    lstrlenW
+call    sub_401448
+jz      short loc_403CA4
+" -> "call    sub_401438
+jmp     short loc_403CF3
+";
+		"call    lstrcpyW
+call    lstrcatW
+jmp     short loc_403CAF
+" -> "call    sub_403B7C
+jmp     short loc_403CF3
+";
+		"call    sub_401438
+jmp     short loc_403CF3
+" -> retn;
+		"call    sub_403B7C
+jmp     short loc_403CF3
+" -> retn;
+	}
+	subgraph sub_403AC8 {
+		retn -> sub_403AC8		 [color=red];
+		"call    CloseHandle
+" -> retn;
+		sub_403AC8 -> retn		 [color=blue];
+		sub_403AC8 -> "jz      loc_403B79
+"		 [color=blue];
+		"jz      loc_403B79
+" -> retn;
+		"jz      loc_403B79
+" -> "call    WriteFile
+jz      short loc_403B3F
+";
+		"call    WriteFile
+jz      short loc_403B3F
+" -> "call    sub_4031C0
+call    CloseHandle
+jmp     short loc_403B79
+";
+		"call    WriteFile
+jz      short loc_403B3F
+" -> "call    sub_4031C0
+jnz     short loc_403B79
+";
+		"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_403B79
+" -> retn;
+		"call    sub_4031C0
+jnz     short loc_403B79
+" -> retn;
+		"call    sub_4031C0
+jnz     short loc_403B79
+" -> "call    CloseHandle
+";
+	}
+	subgraph sub_403A64 {
+		retn -> sub_403A64		 [color=red];
+		sub_403A64 -> retn		 [color=blue];
+		sub_403A64 -> "jz      short loc_403AC5
+"		 [color=blue];
+		"jz      short loc_403AC5
+" -> retn;
+		"jz      short loc_403AC5
+" -> "call    CloseHandle
+call    sub_4031C0
+jz      short loc_403AC5
+";
+		"call    CloseHandle
+call    sub_4031C0
+jz      short loc_403AC5
+" -> retn;
+		"call    CloseHandle
+call    sub_4031C0
+jz      short loc_403AC5
+" -> "call    sub_403DB8
+";
+		"call    sub_403DB8
+" -> retn;
+	}
+	subgraph sub_404828 {
+		retn -> sub_404828		 [color=red];
+		"call    sub_4031C0
+" -> retn;
+		sub_404828 -> "call    sub_4031C0
+"		 [color=blue];
+		sub_404828 -> "call    sub_402570
+jz      loc_4048E2
+"		 [color=blue];
+		"call    sub_402570
+jz      loc_4048E2
+" -> retn;
+		"call    sub_402570
+jz      loc_4048E2
+" -> "call    lstrlenW
+call    sub_401448
+jz      short loc_404893
+";
+		"call    lstrlenW
+call    sub_401448
+jz      short loc_404893
+" -> "call    GetTickCount
+call    wsprintfW
+jmp     short loc_40489D
+";
+		"call    lstrlenW
+call    sub_401448
+jz      short loc_404893
+" -> "call    sub_401438
+jmp     short loc_4048E2
+";
+		"call    GetTickCount
+call    wsprintfW
+jmp     short loc_40489D
+" -> "call    sub_4046D8
+jmp     short loc_4048E2
+";
+		"call    sub_401438
+jmp     short loc_4048E2
+" -> retn;
+		"call    sub_4046D8
+jmp     short loc_4048E2
+" -> retn;
+	}
+	subgraph sub_404624 {
+		retn -> sub_404624		 [color=red];
+		"call    CloseHandle
+" -> retn;
+		sub_404624 -> retn		 [color=blue];
+		sub_404624 -> "jz      loc_4046D5
+"		 [color=blue];
+		"jz      loc_4046D5
+" -> retn;
+		"jz      loc_4046D5
+" -> "call    WriteFile
+jz      short loc_40469B
+";
+		"call    WriteFile
+jz      short loc_40469B
+" -> "call    sub_4031C0
+call    CloseHandle
+jmp     short loc_4046D5
+";
+		"call    WriteFile
+jz      short loc_40469B
+" -> "call    sub_4031C0
+jnz     short loc_4046D5
+";
+		"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_4046D5
+" -> retn;
+		"call    sub_4031C0
+jnz     short loc_4046D5
+" -> retn;
+		"call    sub_4031C0
+jnz     short loc_4046D5
+" -> "call    CloseHandle
+";
+	}
+	subgraph sub_404790 {
+		retn -> sub_404790		 [color=red];
+		sub_404790 -> retn		 [color=blue];
+		sub_404790 -> "jz      short loc_404824
+"		 [color=blue];
+		"jz      short loc_404824
+" -> retn;
+		"jz      short loc_404824
+" -> "call    CloseHandle
+call    sub_4031C0
+jz      short loc_404824
+";
+		"call    CloseHandle
+call    sub_4031C0
+jz      short loc_404824
+" -> retn;
+		"call    CloseHandle
+call    sub_4031C0
+jz      short loc_404824
+" -> "call    ShellExecuteW
+jb      short loc_404824
+";
+		"call    ShellExecuteW
+jb      short loc_404824
+" -> retn;
+		"call    ShellExecuteW
+jb      short loc_404824
+" -> "call    sub_403064
+call    Sleep
+call    sub_4042D8
+";
+	}
+	subgraph sub_4042D8 {
+		sub_4042D8 -> "call    sub_40176C
+"		 [color=blue];
+		sub_4042D8 -> "call    sub_403064
+call    ExitProcess_0
+"		 [color=blue];
+		"call    sub_40176C
+" -> "call    sub_403064
+call    ExitProcess_0
+";
+	}
+	subgraph sub_4043F4 {
+		retn -> sub_4043F4		 [color=red];
+		sub_4043F4 -> "call    sub_402428
+"		 [color=blue];
+		sub_4043F4 -> "call    ShellExecuteW
+jb      short locret_40442E
+"		 [color=blue];
+		"call    sub_402428
+" -> "call    ShellExecuteW
+jb      short locret_40442E
+";
+		"call    ShellExecuteW
+jb      short locret_40442E
+" -> retn;
+		"call    ShellExecuteW
+jb      short locret_40442E
+" -> "call    ExitProcess_0
+";
+	}
+	subgraph sub_406348 {
+		sub_406348 -> "call    sub_4031C0
+retn
+"		 [color=blue];
+		sub_406348 -> "call    OpenServiceW
+jz      short loc_4063A6
+"		 [color=blue];
+		"call    OpenServiceW
+jz      short loc_4063A6
+" -> "jnz     short loc_406393
+";
+		"call    OpenServiceW
+jz      short loc_4063A6
+" -> "call    CloseServiceHandle
+";
+		"jnz     short loc_406393
+" -> "call    StartServiceW
+jmp     short loc_4063A0
+";
+		"jnz     short loc_406393
+" -> "call    ControlService
+";
+		"call    CloseServiceHandle
+" -> "call    sub_4031C0
+retn
+";
+		"call    CloseServiceHandle
+" -> "call    CloseServiceHandle
+";
+		"call    StartServiceW
+jmp     short loc_4063A0
+" -> "call    CloseServiceHandle
+";
+		"call    ControlService
+" -> "call    CloseServiceHandle
+";
+	}
+	subgraph sub_402FA0 {
+		sub_402FA0 -> "call    sub_402D10
+call    CreateThread
+retn
+"		 [color=blue];
+	}
+	subgraph sub_402D48 {
+		retn -> sub_402D48		 [color=red];
+		sub_402D48 -> retn		 [color=blue];
+		sub_402D48 -> "call    GetExitCodeProcess
+jnz     short loc_402D84
+"		 [color=blue];
+		"call    GetExitCodeProcess
+jnz     short loc_402D84
+" -> retn;
+		"call    GetExitCodeProcess
+jnz     short loc_402D84
+" -> "call    WriteFile
+";
+		"call    WriteFile
+" -> retn;
+	}
+	subgraph sub_4066CC {
+		sub_4066CC -> "call    CreateThread
+retn
+"		 [color=blue];
+	}
+	subgraph sub_404968 {
+		"retn    4
+" -> sub_404968		 [color=red];
+		"call    sub_401438
+" -> "retn    4
+";
+		"call    sub_401438
+" -> "call    sub_401438
+";
+		"call    FindClose
+" -> "call    sub_401438
+";
+		"call    FindClose
+" -> "jz      loc_404B81
+";
+		sub_404968 -> "retn    4
+"		 [color=blue];
+		sub_404968 -> "call    sub_4014D0
+jz      loc_404B81
+"		 [color=blue];
+		"call    sub_4014D0
+jz      loc_404B81
+" -> "retn    4
+";
+		"call    sub_4014D0
+jz      loc_404B81
+" -> "call    sub_4014D0
+jz      loc_404B79
+";
+		"call    sub_4014D0
+jz      loc_404B79
+" -> "call    sub_401438
+";
+		"call    sub_4014D0
+jz      loc_404B79
+" -> "call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404A8E
+";
+		"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404A8E
+" -> "jz      loc_404A88
+";
+		"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404A8E
+" -> "jz      loc_404B81
+";
+		"jz      loc_404A88
+" -> "call    FindClose
+";
+		"jz      loc_404A88
+" -> "call    lstrlenW
+jnz     short loc_404A1F
+";
+		"jz      loc_404B81
+" -> "retn    4
+";
+		"jz      loc_404B81
+" -> "call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404B71
+";
+		"call    lstrlenW
+jnz     short loc_404A1F
+" -> "jz      short loc_404A73
+";
+		"call    lstrlenW
+jnz     short loc_404A1F
+" -> "call    sub_401538
+jnz     short loc_404A73
+";
+		"jz      short loc_404A73
+" -> "call    sub_401538
+jnz     short loc_404A73
+";
+		"jz      short loc_404A73
+" -> "call    FindNextFileW
+jnz     loc_4049F7
+";
+		"call    sub_401538
+jnz     short loc_404A73
+" -> "call    FindNextFileW
+jnz     loc_4049F7
+";
+		"call    sub_401538
+jnz     short loc_404A73
+" -> "call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+";
+		"call    FindNextFileW
+jnz     loc_4049F7
+" -> "call    FindClose
+";
+		"call    FindNextFileW
+jnz     loc_4049F7
+" -> "jz      loc_404A88
+";
+		"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+" -> "call    FindNextFileW
+jnz     loc_4049F7
+";
+		"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404B71
+" -> "call    sub_401438
+";
+		"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404B71
+" -> "call    lstrlenW
+jnz     short loc_404AF1
+";
+		"call    lstrlenW
+jnz     short loc_404AF1
+" -> "jz      short loc_404B56
+";
+		"call    lstrlenW
+jnz     short loc_404AF1
+" -> "call    lstrcmpW
+jz      short loc_404B56
+";
+		"jz      short loc_404B56
+" -> "call    lstrcmpW
+jz      short loc_404B56
+";
+		"jz      short loc_404B56
+" -> "call    FindNextFileW
+jnz     loc_404AD8
+";
+		"jz      short loc_404B56
+" -> "call    FindNextFileW
+jnz     loc_404AD8
+";
+		"jz      short loc_404B56
+" -> "call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    sub_404968
+";
+		"call    lstrcmpW
+jz      short loc_404B56
+" -> "call    FindNextFileW
+jnz     loc_404AD8
+";
+		"call    lstrcmpW
+jz      short loc_404B56
+" -> "call    sub_401538
+jz      short loc_404B56
+";
+		"call    FindNextFileW
+jnz     loc_404AD8
+" -> "call    FindClose
+";
+		"call    FindNextFileW
+jnz     loc_404AD8
+" -> "call    lstrlenW
+jnz     short loc_404AF1
+";
+		"call    sub_401538
+jz      short loc_404B56
+" -> "jz      short loc_404B56
+";
+		"call    sub_401538
+jz      short loc_404B56
+" -> "call    FindNextFileW
+jnz     loc_404AD8
+";
+		"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    sub_404968
+" -> "call    FindNextFileW
+jnz     loc_404AD8
+";
+	}
+	subgraph lstrcpynW {
+		lstrcpynW -> "jmp     ds __imp_lstrcpynW
+"		 [color=blue];
+	}
+	subgraph FindClose {
+		FindClose -> "jmp     ds __imp_FindClose
+"		 [color=blue];
+	}
+	subgraph sub_401518 {
+		retn -> sub_401518		 [color=red];
+		1 -> retn;
+		sub_401518 -> retn		 [color=blue];
+		sub_401518 -> 1		 [color=blue];
+	}
+	subgraph GetFileSize {
+		GetFileSize -> "jmp     ds __imp_GetFileSize
+"		 [color=blue];
+	}
+	subgraph ReadFile {
+		ReadFile -> "jmp     ds __imp_ReadFile
+"		 [color=blue];
+	}
+	subgraph sub_40261C {
+		retn -> sub_40261C		 [color=red];
+		2 -> "call    ShellExecuteW
+jbe     short loc_402646
+";
+		sub_40261C -> 2		 [color=blue];
+		sub_40261C -> "jmp     short loc_40262D
+"		 [color=blue];
+		"jmp     short loc_40262D
+" -> "call    ShellExecuteW
+jbe     short loc_402646
+";
+		"call    ShellExecuteW
+jbe     short loc_402646
+" -> retn;
+		"call    ShellExecuteW
+jbe     short loc_402646
+" -> retn;
+	}
+	subgraph sub_4046D8 {
+		retn -> sub_4046D8		 [color=red];
+		"call    sub_4031C0
+" -> retn;
+		sub_4046D8 -> "call    sub_4031C0
+"		 [color=blue];
+		sub_4046D8 -> "call    sub_4031C0
+jnz     short loc_404786
+"		 [color=blue];
+		"call    sub_4031C0
+jnz     short loc_404786
+" -> retn;
+		"call    sub_4031C0
+jnz     short loc_404786
+" -> "call    sub_4031C0
+call    CloseHandle
+jmp     short loc_404786
+";
+		"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_404786
+" -> retn;
+	}
+	subgraph DeleteFileW {
+		DeleteFileW -> "jmp     ds __imp_DeleteFileW
+"		 [color=blue];
+	}
+	subgraph WSAStartup {
+		WSAStartup -> "jmp     ds __imp_WSAStartup
+"		 [color=blue];
+	}
+	subgraph sub_403140 {
+		retn -> sub_403140		 [color=red];
+		6 -> retn;
+		sub_403140 -> retn		 [color=blue];
+		sub_403140 -> "call    htons
+call    inet_addr
+jnz     short loc_4031A1
+"		 [color=blue];
+		"call    htons
+call    inet_addr
+jnz     short loc_4031A1
+" -> "call    gethostbyname
+jz      short loc_40319C
+";
+		"call    htons
+call    inet_addr
+jnz     short loc_4031A1
+" -> "call    connect
+jz      short loc_4031B5
+";
+		"call    gethostbyname
+jz      short loc_40319C
+" -> "jmp     short loc_4031A1
+";
+		"call    gethostbyname
+jz      short loc_40319C
+" -> "jmp     short loc_4031B5
+";
+		"call    connect
+jz      short loc_4031B5
+" -> retn;
+		"call    connect
+jz      short loc_4031B5
+" -> 6;
+		"jmp     short loc_4031A1
+" -> "call    connect
+jz      short loc_4031B5
+";
+		"jmp     short loc_4031B5
+" -> retn;
+	}
+	subgraph sub_406F58 {
+		retn -> sub_406F58		 [color=red];
+		"call    sub_401438
+" -> retn;
+		sub_406F58 -> retn		 [color=blue];
+		sub_406F58 -> "call    sub_403000
+jz      short loc_406FE7
+"		 [color=blue];
+		"call    sub_403000
+jz      short loc_406FE7
+" -> "call    sub_401438
+";
+		"call    sub_403000
+jz      short loc_406FE7
+" -> "call    sub_401438
+";
+		"call    sub_403000
+jz      short loc_406FE7
+" -> "jz      short loc_406FE7
+";
+		"call    sub_403000
+jz      short loc_406FE7
+" -> "jz      short loc_406FE7
+";
+		"jz      short loc_406FE7
+" -> "call    sub_401438
+";
+		"jz      short loc_406FE7
+" -> "call    sub_401438
+";
+		"jz      short loc_406FE7
+" -> "call    sub_401438
+";
+		"jz      short loc_406FE7
+" -> "ja      short loc_406FE7
+";
+		"jz      short loc_406FE7
+" -> "call    sub_401538
+call    sub_403000
+jz      short loc_406FE7
+";
+		"jz      short loc_406FE7
+" -> "call    sub_40692C
+jmp     short loc_406F74
+";
+		"ja      short loc_406FE7
+" -> "call    sub_401438
+";
+		"ja      short loc_406FE7
+" -> "call    sub_403000
+jz      short loc_406FE7
+";
+		"call    sub_401538
+call    sub_403000
+jz      short loc_406FE7
+" -> "call    sub_401438
+";
+		"call    sub_401538
+call    sub_403000
+jz      short loc_406FE7
+" -> "jz      short loc_406FE7
+";
+		"call    sub_40692C
+jmp     short loc_406F74
+" -> "call    sub_403000
+jz      short loc_406FE7
+";
+	}
+	subgraph sub_4016A8 {
+		"retn    8
+" -> sub_4016A8		 [color=red];
+		"call    sub_401438
+" -> "retn    8
+";
+		sub_4016A8 -> "call    RegOpenKeyExW
+jnz     loc_401760
+"		 [color=blue];
+		sub_4016A8 -> "call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401758
+"		 [color=blue];
+		"call    RegOpenKeyExW
+jnz     loc_401760
+" -> "retn    8
+";
+		"call    RegOpenKeyExW
+jnz     loc_401760
+" -> "call    RegCreateKeyW
+call    RegCloseKey
+jmp     short loc_401760
+";
+		"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401758
+" -> "call    sub_401438
+";
+		"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401758
+" -> "call    lstrlenW
+call    RegSetValueExW
+call    RegCloseKey
+";
+		"call    RegCreateKeyW
+call    RegCloseKey
+jmp     short loc_401760
+" -> "retn    8
+";
+		"call    lstrlenW
+call    RegSetValueExW
+call    RegCloseKey
+" -> "call    sub_401438
+";
+	}
+	subgraph SetErrorMode {
+		SetErrorMode -> "jmp     ds __imp_SetErrorMode
+"		 [color=blue];
+	}
+	subgraph sub_4040F0 {
+		retn -> sub_4040F0		 [color=red];
+		8 -> "call    [esp+20h+var_18]
+";
+		sub_4040F0 -> "call    GetProcAddress
+jz      short loc_404160
+"		 [color=blue];
+		sub_4040F0 -> "jz      loc_4041EC
+"		 [color=blue];
+		"call    GetProcAddress
+jz      short loc_404160
+" -> "jz      loc_4041EC
+";
+		"call    GetProcAddress
+jz      short loc_404160
+" -> "jb      short loc_404133
+";
+		"jz      loc_4041EC
+" -> retn;
+		"jz      loc_4041EC
+" -> "call    GetModuleHandleA
+jz      short loc_4041EC
+";
+		"jb      short loc_404133
+" -> "jz      short loc_40413B
+";
+		"jb      short loc_404133
+" -> "jmp     short loc_404155
+";
+		"jz      short loc_40413B
+" -> "jmp     short loc_404155
+";
+		"jz      short loc_40413B
+" -> "jz      short loc_40414C
+";
+		"jmp     short loc_404155
+" -> "call    [esp+20h+var_18]
+";
+		"jmp     short loc_404155
+" -> "call    [esp+20h+var_18]
+";
+		"jz      short loc_40414C
+" -> 8;
+		"jz      short loc_40414C
+" -> "jmp     loc_4041EC
+";
+		"jmp     loc_4041EC
+" -> retn;
+		"call    [esp+20h+var_18]
+" -> "jz      loc_4041EC
+";
+		"call    GetModuleHandleA
+jz      short loc_4041EC
+" -> retn;
+		"call    GetModuleHandleA
+jz      short loc_4041EC
+" -> "call    GetProcAddress
+jz      short loc_4041EC
+";
+		"call    GetProcAddress
+jz      short loc_4041EC
+" -> retn;
+		"call    GetProcAddress
+jz      short loc_4041EC
+" -> "jb      short loc_40419E
+";
+		"jb      short loc_40419E
+" -> "jz      short loc_4041A9
+";
+		"jb      short loc_40419E
+" -> "jmp     short loc_4041CF
+";
+		"jz      short loc_4041A9
+" -> "jmp     short loc_4041CF
+";
+		"jz      short loc_4041A9
+" -> "jz      short loc_4041BA
+";
+		"jmp     short loc_4041CF
+" -> "call    GetCurrentProcess
+call    [esp+2Ch+var_14]
+jnz     short loc_4041EA
+";
+		"jmp     short loc_4041CF
+" -> "call    GetCurrentProcess
+call    [esp+2Ch+var_14]
+jnz     short loc_4041EA
+";
+		"jz      short loc_4041BA
+" -> "jmp     short loc_4041EC
+";
+		"jz      short loc_4041BA
+" -> 19;
+		"jmp     short loc_4041EC
+" -> retn;
+		"jmp     short loc_4041EC
+" -> retn;
+		19 -> "call    GetCurrentProcess
+call    [esp+2Ch+var_14]
+jnz     short loc_4041EA
+";
+		"call    GetCurrentProcess
+call    [esp+2Ch+var_14]
+jnz     short loc_4041EA
+" -> "jmp     short loc_4041EC
+";
+		"call    GetCurrentProcess
+call    [esp+2Ch+var_14]
+jnz     short loc_4041EA
+" -> 22;
+		22 -> retn;
+	}
+	subgraph sub_401F9C {
+		sub_401F9C -> retn		 [color=blue];
+		sub_401F9C -> "call    sub_401E34
+retn
+"		 [color=blue];
+	}
+	subgraph sub_404334 {
+		retn -> sub_404334		 [color=red];
+		sub_404334 -> retn		 [color=blue];
+		sub_404334 -> "call    ExitProcess_0
+"		 [color=blue];
+	}
+	subgraph sub_4023B8 {
+		retn -> sub_4023B8		 [color=red];
+		"call    lstrcatW
+" -> retn;
+		sub_4023B8 -> retn		 [color=blue];
+		sub_4023B8 -> "call    GetWindowsDirectoryW
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_402419
+"		 [color=blue];
+		"call    GetWindowsDirectoryW
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_402419
+" -> retn;
+		"call    GetWindowsDirectoryW
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_402419
+" -> "call    lstrcatW
+";
+	}
+	subgraph sub_404430 {
+		retn -> sub_404430		 [color=red];
+		"call    lstrcatW
+" -> "call    sub_401438
+";
+		"call    sub_401438
+" -> retn;
+		sub_404430 -> retn		 [color=blue];
+		sub_404430 -> "call    sub_402724
+call    sub_402570
+jz      loc_40450A
+"		 [color=blue];
+		"call    sub_402724
+call    sub_402570
+jz      loc_40450A
+" -> retn;
+		"call    sub_402724
+call    sub_402570
+jz      loc_40450A
+" -> "call    sub_402724
+call    lstrcmpW
+jz      short loc_4044E3
+";
+		"call    sub_402724
+call    lstrcmpW
+jz      short loc_4044E3
+" -> "call    lstrcatW
+";
+		"call    sub_402724
+call    lstrcmpW
+jz      short loc_4044E3
+" -> "call    lstrcatW
+call    sub_402428
+jz      short loc_404501
+";
+		"call    lstrcatW
+call    sub_402428
+jz      short loc_404501
+" -> "call    sub_401438
+";
+		"call    lstrcatW
+call    sub_402428
+jz      short loc_404501
+" -> "call    CopyFileW
+jz      short loc_4044D8
+";
+		"call    CopyFileW
+jz      short loc_4044D8
+" -> "call    ShellExecuteW
+jb      short loc_4044D8
+";
+		"call    CopyFileW
+jz      short loc_4044D8
+" -> "call    sub_401438
+jmp     short loc_404501
+";
+		"call    ShellExecuteW
+jb      short loc_4044D8
+" -> "call    ExitProcess_0
+";
+		"call    ShellExecuteW
+jb      short loc_4044D8
+" -> "call    sub_401438
+jmp     short loc_404501
+";
+		"call    sub_401438
+jmp     short loc_404501
+" -> "call    sub_401438
+";
+	}
+	subgraph sub_402350 {
+		retn -> sub_402350		 [color=red];
+		"call    lstrcatW
+" -> retn;
+		sub_402350 -> retn		 [color=blue];
+		sub_402350 -> "call    lstrcatW
+"		 [color=blue];
+	}
+	subgraph sub_402454 {
+		retn -> sub_402454		 [color=red];
+		"call    sub_401438
+" -> retn;
+		sub_402454 -> retn		 [color=blue];
+		sub_402454 -> "call    sub_401538
+call    wsprintfW
+call    sub_4016A8
+jnz     short loc_4024EB
+"		 [color=blue];
+		"call    sub_401538
+call    wsprintfW
+call    sub_4016A8
+jnz     short loc_4024EB
+" -> "call    sub_401438
+";
+		"call    sub_401538
+call    wsprintfW
+call    sub_4016A8
+jnz     short loc_4024EB
+" -> "call    sub_4016A8
+";
+		"call    sub_4016A8
+" -> "call    sub_401438
+";
+	}
+	subgraph sub_403DB8 {
+		retn -> sub_403DB8		 [color=red];
+		"call    sub_401510
+" -> "jz      loc_404015
+";
+		sub_403DB8 -> "call    sub_402300
+jz      short loc_403E6C
+"		 [color=blue];
+		sub_403DB8 -> "jz      loc_404015
+"		 [color=blue];
+		"call    sub_402300
+jz      short loc_403E6C
+" -> "jz      loc_404015
+";
+		"call    sub_402300
+jz      short loc_403E6C
+" -> "call    sub_401448
+jz      short loc_403E6C
+";
+		"jz      loc_404015
+" -> retn;
+		"jz      loc_404015
+" -> "call    sub_4022B8
+call    sub_403790
+jz      loc_404008
+";
+		"call    sub_401448
+jz      short loc_403E6C
+" -> "call    sub_401510
+";
+		"call    sub_401448
+jz      short loc_403E6C
+" -> "jz      loc_404015
+";
+		"call    sub_4022B8
+call    sub_403790
+jz      loc_404008
+" -> "call    sub_40394C
+jz      loc_404008
+";
+		"call    sub_4022B8
+call    sub_403790
+jz      loc_404008
+" -> "call    DeleteFileW
+";
+		"call    sub_40394C
+jz      loc_404008
+" -> "call    DeleteFileW
+";
+		"call    sub_40394C
+jz      loc_404008
+" -> "call    ebx
+jnz     loc_404008
+";
+		"call    DeleteFileW
+" -> retn;
+		"call    ebx
+jnz     loc_404008
+" -> "call    DeleteFileW
+";
+		"call    ebx
+jnz     loc_404008
+" -> "call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+\
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+jz      short loc_404015
+";
+		"call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+\
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+jz      short loc_404015
+" -> retn;
+		"call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+\
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+jz      short loc_404015
+" -> "call    eax
+call    wsprintfW
+call    sub_4031C0
+jmp     short loc_404015
+";
+		"call    eax
+call    wsprintfW
+call    sub_4031C0
+jmp     short loc_404015
+" -> retn;
+	}
+	subgraph SendMessageW {
+		SendMessageW -> "jmp     ds __imp_SendMessageW
+"		 [color=blue];
+	}
+	subgraph LoadResource {
+		LoadResource -> "jmp     ds __imp_LoadResource
+"		 [color=blue];
+	}
+	subgraph LockResource {
+		LockResource -> "jmp     ds __imp_LockResource
+"		 [color=blue];
+	}
+	subgraph VirtualFree {
+		VirtualFree -> "jmp     ds __imp_VirtualFree
+"		 [color=blue];
+	}
+	subgraph sub_403650 {
+		"retn    4
+" -> sub_403650		 [color=red];
+		1 -> "jz      short loc_403698
+";
+		16 -> "retn    4
+";
+		sub_403650 -> 1		 [color=blue];
+		sub_403650 -> "jz      short loc_403698
+"		 [color=blue];
+		"jz      short loc_403698
+" -> "jz      short loc_403684
+";
+		"jz      short loc_403698
+" -> "jz      short loc_4036B0
+";
+		"jz      short loc_403684
+" -> "jz      short loc_40367F
+";
+		"jz      short loc_403684
+" -> "jz      short loc_403693
+";
+		"jz      short loc_4036B0
+" -> "jz      short loc_4036AB
+";
+		"jz      short loc_4036B0
+" -> "jz      short loc_4036BC
+";
+		"jz      short loc_40367F
+" -> "jmp     short loc_4036BF
+";
+		"jz      short loc_40367F
+" -> "jmp     short loc_4036BF
+";
+		"jz      short loc_403693
+" -> "jmp     short loc_4036BF
+";
+		"jz      short loc_403693
+" -> "jmp     short loc_4036BF
+";
+		"jmp     short loc_4036BF
+" -> "retn    4
+";
+		"jmp     short loc_4036BF
+" -> "retn    4
+";
+		"jmp     short loc_4036BF
+" -> "retn    4
+";
+		"jmp     short loc_4036BF
+" -> "retn    4
+";
+		"jmp     short loc_4036BF
+" -> "retn    4
+";
+		"jmp     short loc_4036BF
+" -> "retn    4
+";
+		"jmp     short loc_4036BF
+" -> "retn    4
+";
+		"jz      short loc_4036AB
+" -> "jmp     short loc_4036BF
+";
+		"jz      short loc_4036AB
+" -> "jmp     short loc_4036BF
+";
+		"jz      short loc_4036BC
+" -> 16;
+		"jz      short loc_4036BC
+" -> "jmp     short loc_4036BF
+";
+	}
+	subgraph sub_402508 {
+		retn -> sub_402508		 [color=red];
+		5 -> retn;
+		3 -> "jnz     short loc_40251E
+";
+		sub_402508 -> retn		 [color=blue];
+		sub_402508 -> "jmp     short loc_402523
+"		 [color=blue];
+		"jmp     short loc_402523
+" -> "jnz     short loc_40251E
+";
+		"jnz     short loc_40251E
+" -> 5;
+		"jnz     short loc_40251E
+" -> "jl      short loc_402529
+";
+		"jl      short loc_402529
+" -> 5;
+		"jl      short loc_402529
+" -> 3;
+	}
+	subgraph sub_401508 {
+		sub_401508 -> "call    sub_4013F8
+retn
+"		 [color=blue];
+	}
+	subgraph sub_403B7C {
+		retn -> sub_403B7C		 [color=red];
+		"call    sub_4031C0
+" -> retn;
+		sub_403B7C -> "call    sub_4031C0
+"		 [color=blue];
+		sub_403B7C -> "call    sub_4031C0
+jnz     short loc_403C2A
+"		 [color=blue];
+		"call    sub_4031C0
+jnz     short loc_403C2A
+" -> retn;
+		"call    sub_4031C0
+jnz     short loc_403C2A
+" -> "call    sub_4031C0
+call    CloseHandle
+jmp     short loc_403C2A
+";
+		"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_403C2A
+" -> retn;
+	}
+	subgraph sub_4058D0 {
+		retn -> sub_4058D0		 [color=red];
+		sub_4058D0 -> "call    GetModuleHandleA
+jz      loc_405A14
+"		 [color=blue];
+		sub_4058D0 -> "jz      short loc_405A22
+"		 [color=blue];
+		"call    GetModuleHandleA
+jz      loc_405A14
+" -> "jz      short loc_405A22
+";
+		"call    GetModuleHandleA
+jz      loc_405A14
+" -> "call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+";
+		"jz      short loc_405A22
+" -> retn;
+		"jz      short loc_405A22
+" -> "jnz     short loc_405A26
+";
+		"call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+" -> "jz      short loc_405A22
+";
+		"jnz     short loc_405A26
+" -> retn;
+		"jnz     short loc_405A26
+" -> retn;
+	}
+	subgraph sub_4032DC {
+		sub_4032DC -> "retn    8
+"		 [color=blue];
+	}
+	subgraph sub_403928 {
+		sub_403928 -> retn		 [color=blue];
+	}
+	subgraph sub_40146C {
+		retn -> sub_40146C		 [color=red];
+		sub_40146C -> "call    sub_401448
+jmp     short loc_4014A9
+"		 [color=blue];
+		sub_40146C -> "call    sub_401448
+jz      short loc_4014A9
+"		 [color=blue];
+		"call    sub_401448
+jmp     short loc_4014A9
+" -> retn;
+		"call    sub_401448
+jz      short loc_4014A9
+" -> retn;
+		"call    sub_401448
+jz      short loc_4014A9
+" -> "call    sub_401510
+call    sub_401438
+";
+		"call    sub_401510
+call    sub_401438
+" -> retn;
+	}
+	subgraph sub_403308 {
+		sub_403308 -> "retn    4
+"		 [color=blue];
+	}
+	subgraph sub_4032F8 {
+		sub_4032F8 -> "retn    4
+"		 [color=blue];
+	}
+	subgraph IsBadReadPtr {
+		IsBadReadPtr -> "jmp     ds __imp_IsBadReadPtr
+"		 [color=blue];
+	}
+	subgraph MessageBoxW {
+		MessageBoxW -> "jmp     ds __imp_MessageBoxW
+"		 [color=blue];
+	}
+	subgraph socket {
+		socket -> "jmp     ds __imp_socket
+"		 [color=blue];
+	}
+	subgraph htons {
+		htons -> "jmp     ds __imp_htons
+"		 [color=blue];
+	}
+	subgraph inet_addr {
+		inet_addr -> "jmp     ds __imp_inet_addr
+"		 [color=blue];
+	}
+	subgraph connect {
+		connect -> "jmp     ds __imp_connect
+"		 [color=blue];
+	}
+	subgraph ExitProcess {
+		ExitProcess -> "jmp     ds __imp_ExitProcess
+"		 [color=blue];
+	}
+	subgraph sub_40493C {
+		retn -> sub_40493C		 [color=red];
+		"call    lstrcatW
+" -> retn;
+		sub_40493C -> retn		 [color=blue];
+		sub_40493C -> "call    lstrlenW
+jz      short loc_404962
+"		 [color=blue];
+		"call    lstrlenW
+jz      short loc_404962
+" -> retn;
+		"call    lstrlenW
+jz      short loc_404962
+" -> "call    lstrcatW
+";
+	}
+	subgraph CopyFileW {
+		CopyFileW -> "jmp     ds __imp_CopyFileW
+"		 [color=blue];
+	}
+	subgraph sub_403CF8 {
+		retn -> sub_403CF8		 [color=red];
+		"call    CloseHandle
+" -> retn;
+		sub_403CF8 -> "call    lstrcpyW
+call    lstrcatW
+call    sub_401438
+"		 [color=blue];
+		sub_403CF8 -> "call    CreateFileW
+jz      short loc_403DAD
+"		 [color=blue];
+		"call    lstrcpyW
+call    lstrcatW
+call    sub_401438
+" -> "call    CreateFileW
+jz      short loc_403DAD
+";
+		"call    CreateFileW
+jz      short loc_403DAD
+" -> retn;
+		"call    CreateFileW
+jz      short loc_403DAD
+" -> "call    GetFileSize
+call    sub_4014B4
+jz      short loc_403DA7
+";
+		"call    GetFileSize
+call    sub_4014B4
+jz      short loc_403DA7
+" -> "call    CloseHandle
+";
+		"call    GetFileSize
+call    sub_4014B4
+jz      short loc_403DA7
+" -> "call    ReadFile
+";
+		"call    ReadFile
+" -> "call    CloseHandle
+";
+	}
+	subgraph sub_402300 {
+		retn -> sub_402300		 [color=red];
+		sub_402300 -> retn		 [color=blue];
+		sub_402300 -> "call    LoadResource
+jz      short loc_402346
+"		 [color=blue];
+		"call    LoadResource
+jz      short loc_402346
+" -> retn;
+		"call    LoadResource
+jz      short loc_402346
+" -> "call    LockResource
+call    SizeofResource
+";
+		"call    LockResource
+call    SizeofResource
+" -> retn;
+	}
+	subgraph sub_4022B8 {
+		retn -> sub_4022B8		 [color=red];
+		3 -> "jnz     short loc_4022D4
+";
+		sub_4022B8 -> retn		 [color=blue];
+		sub_4022B8 -> "call    lstrlenW
+jz      short loc_4022FA
+"		 [color=blue];
+		"call    lstrlenW
+jz      short loc_4022FA
+" -> retn;
+		"call    lstrlenW
+jz      short loc_4022FA
+" -> "jle     short loc_4022F6
+";
+		"jle     short loc_4022F6
+" -> 3;
+		"jle     short loc_4022F6
+" -> "jnz     short loc_4022D4
+";
+		"jnz     short loc_4022D4
+" -> retn;
+		"jnz     short loc_4022D4
+" -> "jle     short loc_4022F6
+";
+	}
+	subgraph sub_403790 {
+		"retn    0Ch
+" -> sub_403790		 [color=red];
+		9 -> "retn    0Ch
+";
+		sub_403790 -> "retn    0Ch
+"		 [color=blue];
+		sub_403790 -> "call    sub_401510
+jnz     loc_40391C
+"		 [color=blue];
+		"call    sub_401510
+jnz     loc_40391C
+" -> "retn    0Ch
+";
+		"call    sub_401510
+jnz     loc_40391C
+" -> "call    VirtualAlloc
+jnz     short loc_403825
+";
+		"call    VirtualAlloc
+jnz     short loc_403825
+" -> "call    VirtualAlloc
+";
+		"call    VirtualAlloc
+jnz     short loc_403825
+" -> "jz      loc_40391C
+";
+		"call    VirtualAlloc
+" -> "jz      loc_40391C
+";
+		"jz      loc_40391C
+" -> "retn    0Ch
+";
+		"jz      loc_40391C
+" -> "call    GetProcessHeap
+call    HeapAlloc
+call    VirtualAlloc
+call    VirtualAlloc
+call    sub_401510
+call    sub_403318
+jz      \
+short loc_4038D8
+";
+		"call    GetProcessHeap
+call    HeapAlloc
+call    VirtualAlloc
+call    VirtualAlloc
+call    sub_401510
+call    sub_403318
+jz      \
+short loc_4038D8
+" -> "call    sub_4033DC
+";
+		"call    GetProcessHeap
+call    HeapAlloc
+call    VirtualAlloc
+call    VirtualAlloc
+call    sub_401510
+call    sub_403318
+jz      \
+short loc_4038D8
+" -> "call    sub_4034A8
+call    sub_4036C8
+jz      short loc_403917
+";
+		"call    sub_4033DC
+" -> "call    sub_4034A8
+call    sub_4036C8
+jz      short loc_403917
+";
+		"call    sub_4034A8
+call    sub_4036C8
+jz      short loc_403917
+" -> 9;
+		"call    sub_4034A8
+call    sub_4036C8
+jz      short loc_403917
+" -> "call    [ebp+var_14]
+";
+		"call    [ebp+var_14]
+" -> 9;
+	}
+	subgraph sub_40394C {
+		"retn    8
+" -> sub_40394C		 [color=red];
+		10 -> "retn    8
+";
+		4 -> "call    sub_403928
+jnz     short loc_4039E6
+";
+		sub_40394C -> "retn    8
+"		 [color=blue];
+		sub_40394C -> "jz      loc_403A20
+"		 [color=blue];
+		"jz      loc_403A20
+" -> "retn    8
+";
+		"jz      loc_403A20
+" -> "jz      short loc_403A20
+";
+		"jz      short loc_403A20
+" -> "retn    8
+";
+		"jz      short loc_403A20
+" -> "retn    8
+";
+		"jz      short loc_403A20
+" -> "jb      short loc_4039F1
+";
+		"jz      short loc_403A20
+" -> "jb      short loc_403A20
+";
+		"jb      short loc_4039F1
+" -> 4;
+		"jb      short loc_4039F1
+" -> "jz      short loc_403A20
+";
+		"call    sub_403928
+jnz     short loc_4039E6
+" -> "jmp     short loc_4039F1
+";
+		"call    sub_403928
+jnz     short loc_4039E6
+" -> "jnz     short loc_4039CB
+";
+		"jmp     short loc_4039F1
+" -> "jz      short loc_403A20
+";
+		"jnz     short loc_4039CB
+" -> "jz      short loc_403A20
+";
+		"jnz     short loc_4039CB
+" -> "call    sub_403928
+jnz     short loc_4039E6
+";
+		"jb      short loc_403A20
+" -> "retn    8
+";
+		"jb      short loc_403A20
+" -> 10;
+	}
+	subgraph CreatePipe {
+		CreatePipe -> "jmp     ds __imp_CreatePipe
+"		 [color=blue];
+	}
+	subgraph sub_4063C4 {
+		retn -> sub_4063C4		 [color=red];
+		"call    CloseServiceHandle
+" -> retn;
+		sub_4063C4 -> retn		 [color=blue];
+		sub_4063C4 -> "call    OpenServiceW
+jz      short loc_406405
+"		 [color=blue];
+		"call    OpenServiceW
+jz      short loc_406405
+" -> "call    CloseServiceHandle
+";
+		"call    OpenServiceW
+jz      short loc_406405
+" -> "call    QueryServiceStatus
+call    CloseServiceHandle
+";
+		"call    QueryServiceStatus
+call    CloseServiceHandle
+" -> "call    CloseServiceHandle
+";
+	}
+	subgraph sub_401E34 {
+		retn -> sub_401E34		 [color=red];
+		sub_401E34 -> "call    sub_4025E4
+jl      loc_401F94
+"		 [color=blue];
+		"call    sub_4025E4
+jl      loc_401F94
+" -> retn;
+		"call    sub_4025E4
+jl      loc_401F94
+" -> "call    sub_4014B4
+jz      loc_401F88      ; jumptable 00401E8F default case
+";
+		"call    sub_4014B4
+jz      loc_401F88      ; jumptable 00401E8F default case
+" -> "call    sub_401538
+call    sub_401510
+ja      loc_401F88      ; jumptable 00401E8F default case
+";
+		"call    sub_4014B4
+jz      loc_401F88      ; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"call    sub_401538
+call    sub_401510
+ja      loc_401F88      ; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"call    sub_401538
+call    sub_401510
+ja      loc_401F88      ; jumptable 00401E8F default case
+" -> "jmp     off_401E96[eax*4]; switch jump
+";
+		"jnz     loc_401E3D
+" -> retn;
+		"jnz     loc_401E3D
+" -> "call    sub_4025E4
+jl      loc_401F94
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "jmp     loc_401F88      ; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "jmp     loc_401F88      ; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "jmp     loc_401F88      ; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "jmp     loc_401F88      ; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "jmp     short loc_401F88; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "jmp     short loc_401F88; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "call    StrToIntW
+jmp     short loc_401F88; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "call    sub_401D70
+jmp     short loc_401F88; jumptable 00401E8F default case
+";
+		"jmp     off_401E96[eax*4]; switch jump
+" -> "call    sub_401D50
+";
+		"jmp     loc_401F88      ; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"jmp     loc_401F88      ; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"jmp     loc_401F88      ; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"jmp     loc_401F88      ; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"jmp     short loc_401F88; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"jmp     short loc_401F88; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"call    StrToIntW
+jmp     short loc_401F88; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"call    sub_401D70
+jmp     short loc_401F88; jumptable 00401E8F default case
+" -> "jnz     loc_401E3D
+";
+		"call    sub_401D50
+" -> "jnz     loc_401E3D
+";
+	}
+	subgraph sub_402534 {
+		sub_402534 -> "call    sub_402508
+call    lstrlenW
+call    sub_401538
+retn
+"		 [color=blue];
+	}
+	subgraph sub_4010E8 {
+		sub_4010E8 -> "call    ExitProcess
+"		 [color=blue];
+	}
+	subgraph CreateMutexW {
+		CreateMutexW -> "jmp     ds __imp_CreateMutexW
+"		 [color=blue];
+	}
+	subgraph sub_405008 {
+		retn -> sub_405008		 [color=red];
+		"call    sub_4031C0
+" -> retn;
+		sub_405008 -> "call    sub_4031C0
+"		 [color=blue];
+		sub_405008 -> "call    sub_4031C0
+jnz     short loc_4050CC
+"		 [color=blue];
+		"call    sub_4031C0
+jnz     short loc_4050CC
+" -> retn;
+		"call    sub_4031C0
+jnz     short loc_4050CC
+" -> "call    sub_4031C0
+call    CloseHandle
+jmp     short loc_4050CC
+";
+		"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_4050CC
+" -> retn;
+	}
+	subgraph OpenServiceW {
+		OpenServiceW -> "jmp     ds __imp_OpenServiceW
+"		 [color=blue];
+	}
+	subgraph sub_402724 {
+		retn -> sub_402724		 [color=red];
+		3 -> "jnz     short loc_40273D
+";
+		sub_402724 -> retn		 [color=blue];
+		sub_402724 -> "jb      short loc_402752
+"		 [color=blue];
+		"jb      short loc_402752
+" -> "ja      short loc_402752
+";
+		"jb      short loc_402752
+" -> "jnz     short loc_40273D
+";
+		"ja      short loc_402752
+" -> 3;
+		"ja      short loc_402752
+" -> "jnz     short loc_40273D
+";
+		"jnz     short loc_40273D
+" -> retn;
+		"jnz     short loc_40273D
+" -> "jb      short loc_402752
+";
+	}
+	subgraph sub_402428 {
+		retn -> sub_402428		 [color=red];
+		sub_402428 -> retn		 [color=blue];
+		sub_402428 -> "call    GetModuleFileNameW
+"		 [color=blue];
+		"call    GetModuleFileNameW
+" -> retn;
+	}
+	subgraph sub_403000 {
+		sub_403000 -> "call    recv
+jz      short loc_40304B
+"		 [color=blue];
+		sub_403000 -> "call    GetTickCount
+retn    0Ch
+"		 [color=blue];
+		"call    recv
+jz      short loc_40304B
+" -> "call    GetTickCount
+retn    0Ch
+";
+		"call    recv
+jz      short loc_40304B
+" -> "jz      short loc_40304B
+";
+		"call    GetTickCount
+retn    0Ch
+" -> sub_403000		 [color=red];
+		"jz      short loc_40304B
+" -> "call    GetTickCount
+retn    0Ch
+";
+		"jz      short loc_40304B
+" -> "jg      short loc_403025
+";
+		"jg      short loc_403025
+" -> "call    recv
+jz      short loc_40304B
+";
+		"jg      short loc_403025
+" -> "call    GetTickCount
+retn    0Ch
+";
+	}
+	subgraph sub_40692C {
+		"retn    4
+" -> sub_40692C		 [color=red];
+		sub_40692C -> "retn    4
+"		 [color=blue];
+		sub_40692C -> "jmp     off_4069E0[eax*4]; switch jump
+"		 [color=blue];
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "retn    4
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_403064
+call    Sleep
+call    sub_4042D8
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_402AF8
+jnz     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_404C18
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_404C00
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_405504
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_4055F4
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_404D90
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_404CF8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_405440
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_405440
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_4054D4
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_405478
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_40540C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_40537C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_405294
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_4052FC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_4052FC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_4052FC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_4052FC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_40601C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    StrToIntW
+call    sub_405FDC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_40686C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    StrToIntW
+call    sub_40671C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    StrToIntW
+call    sub_40673C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    StrToIntW
+call    sub_406758
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_406414
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_401854
+call    Sleep
+call    sub_4019B8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jl      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jl      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_402204
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jz      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jz      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jz      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jz      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jz      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jz      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jz      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_40522C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_4031C0
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_4031C0
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_4031C0
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_404F3C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_403C34
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_403AC8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_403A64
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_403A64
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_404828
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_404624
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_404790
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_404790
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_403064
+call    Sleep
+call    ExitProcess_0
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_403064
+call    Sleep
+call    sub_4043F4
+jmp     short loc_406F4F; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_406348
+jmp     short loc_406F4F; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_406348
+jmp     short loc_406F4F; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jz      short loc_406F4F; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jz      short loc_406F4F; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "jz      short loc_406F4F; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_402FA0
+jmp     short loc_406F4F; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_402D10      ; jumptable 0040694B case 114
+jmp     short loc_406F4F; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_402D48
+jmp     short loc_406F4F; jumptable 0040694B default case
+";
+		"jmp     off_4069E0[eax*4]; switch jump
+" -> "call    sub_4066CC
+jmp     short loc_406F4F; jumptable 0040694B default case
+";
+		"call    sub_402AF8
+jnz     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_402AF8
+jnz     loc_406F4F      ; jumptable 0040694B default case
+" -> "call    sub_403064
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_404C18
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_404C00
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_405504
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_4055F4
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_404D90
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_404CF8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_405440
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_405440
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_4054D4
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_405478
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_40540C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_40537C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_405294
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_4052FC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_4052FC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_4052FC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_4052FC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_40601C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    StrToIntW
+call    sub_405FDC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_40686C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    StrToIntW
+call    sub_40671C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    StrToIntW
+call    sub_40673C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    StrToIntW
+call    sub_406758
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_406414
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_401854
+call    Sleep
+call    sub_4019B8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jl      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jl      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jl      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jl      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jl      loc_406F4F      ; jumptable 0040694B default case
+" -> "call    sub_40223C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jl      loc_406F4F      ; jumptable 0040694B default case
+" -> "call    sub_40223C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jl      loc_406F4F      ; jumptable 0040694B default case
+" -> "call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jl      loc_406F4F      ; jumptable 0040694B default case
+" -> "call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"call    sub_402204
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "jl      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "jl      loc_406F4F      ; jumptable 0040694B default case
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"jz      loc_406F4F      ; jumptable 0040694B default case
+" -> "call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+";
+		"call    sub_40522C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_4031C0
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_4031C0
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_4031C0
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_404F3C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_403C34
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_403AC8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_403A64
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_403A64
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_404828
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_404624
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_404790
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_404790
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_403064
+call    Sleep
+call    sub_4043F4
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_406348
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_406348
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"jz      short loc_406F4F; jumptable 0040694B default case
+" -> "call    eax
+jmp     short loc_406F4F; jumptable 0040694B default case
+";
+		"jz      short loc_406F4F; jumptable 0040694B default case
+" -> "call    eax
+jmp     short loc_406F4F; jumptable 0040694B default case
+";
+		"jz      short loc_406F4F; jumptable 0040694B default case
+" -> "call    eax
+";
+		"call    sub_402FA0
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_402D10      ; jumptable 0040694B case 114
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_402D48
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_4066CC
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_403064
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_40223C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    sub_40223C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    eax
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    eax
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    eax
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> "retn    4
+";
+		"call    eax
+" -> "retn    4
+";
+	}
+	subgraph EnumWindows {
+		EnumWindows -> "jmp     ds __imp_EnumWindows
+"		 [color=blue];
+	}
+	subgraph sub_40107C {
+		sub_40107C -> retn		 [color=blue];
+	}
+	subgraph MoveFileW {
+		MoveFileW -> "jmp     ds __imp_MoveFileW
+"		 [color=blue];
+	}
+	subgraph sub_4014EC {
+		sub_4014EC -> "call    VirtualAlloc
+retn
+"		 [color=blue];
+	}
+	subgraph lstrcatA {
+		lstrcatA -> "jmp     ds __imp_lstrcatA
+"		 [color=blue];
+	}
+	subgraph lstrcpyA {
+		lstrcpyA -> "jmp     ds __imp_lstrcpyA
+"		 [color=blue];
+	}
+	subgraph lstrcatA_0 {
+		lstrcatA_0 -> "jmp     ds __imp_lstrcatA
+"		 [color=blue];
+	}
+	subgraph sub_401000 {
+		6 -> 7;
+		"retn    8
+" -> sub_401000		 [color=red];
+		7 -> "jb      short loc_401059
+";
+		4 -> "jns     short loc_401036
+";
+		14 -> "retn    8
+";
+		sub_401000 -> "jz      short loc_401072
+"		 [color=blue];
+		sub_401000 -> "jns     short loc_401028
+"		 [color=blue];
+		"jz      short loc_401072
+" -> "jz      short loc_401072
+";
+		"jz      short loc_401072
+" -> "jns     short loc_401028
+";
+		"jz      short loc_401072
+" -> "jmp     short loc_40106B
+";
+		"jz      short loc_401072
+" -> "jmp     short loc_40106B
+";
+		"jns     short loc_401028
+" -> 4;
+		"jns     short loc_401028
+" -> "jns     short loc_401036
+";
+		"jns     short loc_401036
+" -> 6;
+		"jns     short loc_401036
+" -> 7;
+		"jb      short loc_401059
+" -> "ja      short loc_401054
+";
+		"jb      short loc_401059
+" -> 12;
+		"jb      short loc_401059
+" -> 12;
+		"jb      short loc_401059
+" -> 11;
+		"ja      short loc_401054
+" -> "jb      short loc_401059
+";
+		"ja      short loc_401054
+" -> 11;
+		12 -> "jb      short loc_401059
+";
+		12 -> "jz      short loc_40106B
+";
+		11 -> 12;
+		"jz      short loc_40106B
+" -> "retn    8
+";
+		"jz      short loc_40106B
+" -> 14;
+	}
+	subgraph sub_401D70 {
+		retn -> sub_401D70		 [color=red];
+		sub_401D70 -> "call    sub_4025E4
+jl      loc_401E2C
+"		 [color=blue];
+		"call    sub_4025E4
+jl      loc_401E2C
+" -> retn;
+		"call    sub_4025E4
+jl      loc_401E2C
+" -> "call    sub_4014B4
+call    sub_4014B4
+jz      short loc_401E1B
+";
+		"call    sub_4014B4
+call    sub_4014B4
+jz      short loc_401E1B
+" -> "jz      short loc_401E1B
+";
+		"call    sub_4014B4
+call    sub_4014B4
+jz      short loc_401E1B
+" -> "jnz     loc_401D83
+";
+		"jz      short loc_401E1B
+" -> "jnz     loc_401D83
+";
+		"jz      short loc_401E1B
+" -> "call    sub_401538
+call    sub_401510
+call    lstrlenW
+call    lstrlenW
+call    WideCharToMultiByte
+call    sub_401438
+";
+		"jnz     loc_401D83
+" -> retn;
+		"jnz     loc_401D83
+" -> "call    sub_4025E4
+jl      loc_401E2C
+";
+		"call    sub_401538
+call    sub_401510
+call    lstrlenW
+call    lstrlenW
+call    WideCharToMultiByte
+call    sub_401438
+" -> "jnz     loc_401D83
+";
+	}
+	subgraph sub_4011A8 {
+		sub_4011A8 -> "call    CreateMutexW
+retn    0Ch
+"		 [color=blue];
+	}
+	subgraph GetLastError {
+		GetLastError -> "jmp     ds __imp_GetLastError
+"		 [color=blue];
+	}
+	subgraph sub_4032A4 {
+		sub_4032A4 -> "retn    8
+"		 [color=blue];
+	}
+	subgraph SetCursorPos {
+		SetCursorPos -> "jmp     ds __imp_SetCursorPos
+"		 [color=blue];
+	}
+	subgraph wsprintfA {
+		wsprintfA -> "jmp     ds __imp_wsprintfA
+"		 [color=blue];
+	}
+	subgraph mouse_event {
+		mouse_event -> "jmp     ds __imp_mouse_event
+"		 [color=blue];
+	}
+	subgraph sub_402D10 {
+		"call    TerminateProcess
+" -> "call    Sleep
+";
+		retn -> sub_402D10		 [color=red];
+		sub_402D10 -> retn		 [color=blue];
+		sub_402D10 -> "call    GetExitCodeProcess
+jnz     short loc_402D3C
+"		 [color=blue];
+		"call    GetExitCodeProcess
+jnz     short loc_402D3C
+" -> "call    TerminateProcess
+";
+		"call    GetExitCodeProcess
+jnz     short loc_402D3C
+" -> "call    Sleep
+";
+		"call    Sleep
+" -> retn;
+	}
+	subgraph CreateThread {
+		CreateThread -> "jmp     ds __imp_CreateThread
+"		 [color=blue];
+	}
+	subgraph ShowWindow {
+		ShowWindow -> "jmp     ds __imp_ShowWindow
+"		 [color=blue];
+	}
+	subgraph GetUserNameW {
+		GetUserNameW -> "jmp     ds __imp_GetUserNameW
+"		 [color=blue];
+	}
+	subgraph sub_4014D0 {
+		sub_4014D0 -> "call    VirtualAlloc
+retn
+"		 [color=blue];
+	}
+	subgraph sub_405B4C {
+		retn -> sub_405B4C		 [color=red];
+		sub_405B4C -> retn		 [color=blue];
+		sub_405B4C -> "call    ds dword_4092AC
+retn
+"		 [color=blue];
+	}
+	subgraph sub_405B6C {
+		retn -> sub_405B6C		 [color=red];
+		sub_405B6C -> retn		 [color=blue];
+		sub_405B6C -> "call    ds dword_4092CC
+retn
+"		 [color=blue];
+	}
+	subgraph lstrcpyW {
+		lstrcpyW -> "jmp     ds __imp_lstrcpyW
+"		 [color=blue];
+	}
+	subgraph OpenProcess {
+		OpenProcess -> "jmp     ds __imp_OpenProcess
+"		 [color=blue];
+	}
+	subgraph sub_405F50 {
+		"retn    4
+" -> sub_405F50		 [color=red];
+		2 -> "retn    4
+";
+		sub_405F50 -> 2		 [color=blue];
+		sub_405F50 -> "call    ds dword_409310
+jmp     short loc_405F76
+"		 [color=blue];
+		"call    ds dword_409310
+jmp     short loc_405F76
+" -> "retn    4
+";
+	}
+	subgraph sub_405F80 {
+		retn -> sub_405F80		 [color=red];
+		2 -> retn;
+		sub_405F80 -> 2		 [color=blue];
+		sub_405F80 -> "call    ds dword_40934C
+jmp     short loc_405F9F
+"		 [color=blue];
+		"call    ds dword_40934C
+jmp     short loc_405F9F
+" -> retn;
+	}
+	subgraph CloseHandle {
+		CloseHandle -> "jmp     ds __imp_CloseHandle
+"		 [color=blue];
+	}
+	subgraph sub_405B8C {
+		retn -> sub_405B8C		 [color=red];
+		sub_405B8C -> retn		 [color=blue];
+		sub_405B8C -> "call    ds dword_4092D0
+retn
+"		 [color=blue];
+	}
+	subgraph sub_401438 {
+		sub_401438 -> "call    VirtualFree
+retn
+"		 [color=blue];
+	}
+	subgraph sub_401818 {
+		retn -> sub_401818		 [color=red];
+		sub_401818 -> retn		 [color=blue];
+		sub_401818 -> "jnz     short loc_401834
+"		 [color=blue];
+		"jnz     short loc_401834
+" -> "jmp     short locret_401853
+";
+		"jnz     short loc_401834
+" -> "jnz     short loc_401841
+";
+		"jmp     short locret_401853
+" -> retn;
+		"jmp     short locret_401853
+" -> retn;
+		"jmp     short locret_401853
+" -> retn;
+		"jnz     short loc_401841
+" -> "jmp     short locret_401853
+";
+		"jnz     short loc_401841
+" -> "jnz     short loc_40184E
+";
+		"jnz     short loc_40184E
+" -> "jmp     short locret_401853
+";
+		"jnz     short loc_40184E
+" -> 8;
+		8 -> retn;
+	}
+	subgraph RegCloseKey {
+		RegCloseKey -> "jmp     ds __imp_RegCloseKey
+"		 [color=blue];
+	}
+	subgraph shutdown {
+		shutdown -> "jmp     ds __imp_shutdown
+"		 [color=blue];
+	}
+	subgraph closesocket {
+		closesocket -> "jmp     ds __imp_closesocket
+"		 [color=blue];
+	}
+	subgraph sub_402570 {
+		retn -> sub_402570		 [color=red];
+		sub_402570 -> retn		 [color=blue];
+		sub_402570 -> "call    GetModuleFileNameW
+call    sub_402534
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_4025DB
+"		 [color=blue];
+		"call    GetModuleFileNameW
+call    sub_402534
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_4025DB
+" -> retn;
+		"call    GetModuleFileNameW
+call    sub_402534
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_4025DB
+" -> "call    lstrcatW
+";
+		"call    lstrcatW
+" -> retn;
+	}
+	subgraph sub_401448 {
+		retn -> sub_401448		 [color=red];
+		sub_401448 -> retn		 [color=blue];
+		sub_401448 -> "call    sub_401538
+"		 [color=blue];
+		"call    sub_401538
+" -> retn;
+	}
+	subgraph sub_40176C {
+		"retn    4
+" -> sub_40176C		 [color=red];
+		sub_40176C -> "call    RegOpenKeyExW
+jnz     short loc_40180B
+"		 [color=blue];
+		sub_40176C -> "call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401803
+"		 [color=blue];
+		"call    RegOpenKeyExW
+jnz     short loc_40180B
+" -> "retn    4
+";
+		"call    RegOpenKeyExW
+jnz     short loc_40180B
+" -> "call    RegDeleteKeyW
+call    RegCloseKey
+jmp     short loc_40180B
+";
+		"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401803
+" -> "call    RegDeleteValueW
+call    RegCloseKey
+";
+		"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401803
+" -> "call    sub_401438
+";
+		"call    RegDeleteKeyW
+call    RegCloseKey
+jmp     short loc_40180B
+" -> "retn    4
+";
+		"call    RegDeleteValueW
+call    RegCloseKey
+" -> "call    sub_401438
+";
+		"call    sub_401438
+" -> "retn    4
+";
+	}
+	subgraph sub_403064 {
+		sub_403064 -> "jz      short loc_4030A8
+"		 [color=blue];
+		sub_403064 -> "jz      short loc_4030DF
+"		 [color=blue];
+		"jz      short loc_4030A8
+" -> "jz      short loc_4030DF
+";
+		"jz      short loc_4030A8
+" -> "call    CloseHandle
+";
+		"jz      short loc_4030DF
+" -> "call    CloseHandle
+";
+		"jz      short loc_4030DF
+" -> "jz      short loc_403116
+";
+		"call    CloseHandle
+" -> "jz      short loc_4030DF
+";
+		"call    CloseHandle
+" -> "jz      short loc_403116
+";
+		"call    CloseHandle
+" -> "call    sub_402D10
+call    shutdown
+call    closesocket
+retn
+";
+		"jz      short loc_403116
+" -> "call    CloseHandle
+";
+		"jz      short loc_403116
+" -> "call    sub_402D10
+call    shutdown
+call    closesocket
+retn
+";
+	}
+	subgraph LoadLibraryA {
+		LoadLibraryA -> "jmp     ds __imp_LoadLibraryA
+"		 [color=blue];
+	}
+	subgraph FreeLibrary {
+		FreeLibrary -> "jmp     ds __imp_FreeLibrary
+"		 [color=blue];
+	}
+	subgraph CreateFileW {
+		CreateFileW -> "jmp     ds __imp_CreateFileW
+"		 [color=blue];
+	}
+	subgraph lstrcmpW {
+		lstrcmpW -> "jmp     ds __imp_lstrcmpW
+"		 [color=blue];
+	}
+	subgraph sub_40288C {
+		retn -> sub_40288C		 [color=red];
+		sub_40288C -> retn		 [color=blue];
+		sub_40288C -> "call    RegQueryValueExW
+call    RegCloseKey
+"		 [color=blue];
+		"call    RegQueryValueExW
+call    RegCloseKey
+" -> retn;
+	}
+	subgraph sub_402764 {
+		sub_402764 -> "call    sub_401538
+call    GetComputerNameW
+retn
+"		 [color=blue];
+	}
+	subgraph sub_40270C {
+		sub_40270C -> "call    sub_401538
+call    GetUserNameW
+retn
+"		 [color=blue];
+	}
+	subgraph sub_40277C {
+		sub_40277C -> "call    sub_401538
+call    GetLocaleInfoW
+retn
+"		 [color=blue];
+	}
+	subgraph sub_40279C {
+		sub_40279C -> "call    sub_401538
+call    GetForegroundWindow
+call    GetWindowTextW
+retn
+"		 [color=blue];
+	}
+	subgraph sub_4027BC {
+		retn -> sub_4027BC		 [color=red];
+		"call    RegQueryValueExW
+call    RegCloseKey
+" -> retn;
+		sub_4027BC -> retn		 [color=blue];
+		sub_4027BC -> "call    RegQueryValueExW
+call    RegCloseKey
+"		 [color=blue];
+	}
+	subgraph sub_402978 {
+		5 -> "call    FreeLibrary
+retn
+";
+		sub_402978 -> 5		 [color=blue];
+		sub_402978 -> "call    GetProcAddress
+jz      short loc_402A15
+"		 [color=blue];
+		"call    GetProcAddress
+jz      short loc_402A15
+" -> 5;
+		"call    GetProcAddress
+jz      short loc_402A15
+" -> "call    [ebp+var_C]
+jz      short loc_4029F4
+";
+		"call    [ebp+var_C]
+jz      short loc_4029F4
+" -> "call    sub_401000
+call    sub_401000
+jmp     short loc_402A15
+";
+		"call    [ebp+var_C]
+jz      short loc_4029F4
+" -> "call    sub_401000
+call    sub_401000
+";
+		"call    sub_401000
+call    sub_401000
+jmp     short loc_402A15
+" -> 5;
+		"call    sub_401000
+call    sub_401000
+" -> 5;
+		"call    FreeLibrary
+retn
+" -> retn;
+		"jmp     nullsub_2
+" -> retn;
+		"jmp     short loc_402A22
+" -> "call    FreeLibrary
+retn
+";
+	}
+	subgraph sub_402A64 {
+		"call    FreeLibrary
+retn
+" -> retn;
+		"jmp     nullsub_2
+" -> retn;
+		sub_402A64 -> "call    GetProcAddress
+jz      short loc_402AB3
+"		 [color=blue];
+		sub_402A64 -> 3		 [color=blue];
+		"call    GetProcAddress
+jz      short loc_402AB3
+" -> 3;
+		"call    GetProcAddress
+jz      short loc_402AB3
+" -> "call    [ebp+var_C]
+";
+		3 -> "call    FreeLibrary
+retn
+";
+		"call    [ebp+var_C]
+" -> 3;
+		"jmp     short loc_402AC0
+" -> "call    FreeLibrary
+retn
+";
+	}
+	subgraph sub_402188 {
+		retn -> sub_402188		 [color=red];
+		3 -> "call    FreeLibrary
+";
+		sub_402188 -> retn		 [color=blue];
+		sub_402188 -> "call    GetProcAddress
+jz      short loc_4021D5
+"		 [color=blue];
+		"call    GetProcAddress
+jz      short loc_4021D5
+" -> "call    GetCurrentProcess
+call    [esp+1Ch+var_14]
+jz      short loc_4021D5
+";
+		"call    GetProcAddress
+jz      short loc_4021D5
+" -> "call    FreeLibrary
+";
+		"call    GetCurrentProcess
+call    [esp+1Ch+var_14]
+jz      short loc_4021D5
+" -> 3;
+		"call    GetCurrentProcess
+call    [esp+1Ch+var_14]
+jz      short loc_4021D5
+" -> "call    FreeLibrary
+";
+		"call    FreeLibrary
+" -> retn;
+	}
+	subgraph sub_40264C {
+		sub_40264C -> "call    GetLastInputInfo
+call    GetTickCount
+retn
+"		 [color=blue];
+	}
+	subgraph sub_402674 {
+		retn -> sub_402674		 [color=red];
+		sub_402674 -> retn		 [color=blue];
+		sub_402674 -> "jz      short loc_4026FF
+"		 [color=blue];
+		"jz      short loc_4026FF
+" -> "jnz     short loc_402701
+";
+		"jz      short loc_4026FF
+" -> 20;
+		"jnz     short loc_402701
+" -> retn;
+		"jnz     short loc_402701
+" -> retn;
+		"jnz     short loc_402701
+" -> retn;
+		"jnz     short loc_402701
+" -> "jnz     short loc_402701
+";
+		"jnz     short loc_402701
+" -> "jg      short loc_4026AC
+";
+		"jnz     short loc_402701
+" -> "jmp     short loc_402701
+";
+		20 -> retn;
+		"jg      short loc_4026AC
+" -> "jmp     short loc_402701
+";
+		"jg      short loc_4026AC
+" -> "jnz     short loc_4026BC
+";
+		"jmp     short loc_402701
+" -> retn;
+		"jmp     short loc_402701
+" -> retn;
+		"jmp     short loc_402701
+" -> retn;
+		"jmp     short loc_402701
+" -> retn;
+		"jmp     short loc_402701
+" -> retn;
+		"jmp     short loc_402701
+" -> retn;
+		"jnz     short loc_4026BC
+" -> "jmp     short loc_402701
+";
+		"jnz     short loc_4026BC
+" -> "jnz     short loc_4026BC
+";
+		"jnz     short loc_4026BC
+" -> "jnz     short loc_4026CD
+";
+		"jnz     short loc_4026BC
+" -> "jnz     short loc_4026CD
+";
+		"jnz     short loc_4026CD
+" -> "jmp     short loc_402701
+";
+		"jnz     short loc_4026CD
+" -> "jnz     short loc_4026CD
+";
+		"jnz     short loc_4026CD
+" -> "jnz     short loc_4026DD
+";
+		"jnz     short loc_4026CD
+" -> "jnz     short loc_4026DD
+";
+		"jnz     short loc_4026DD
+" -> "jmp     short loc_402701
+";
+		"jnz     short loc_4026DD
+" -> "jnz     short loc_4026DD
+";
+		"jnz     short loc_4026DD
+" -> "jnz     short loc_4026EE
+";
+		"jnz     short loc_4026DD
+" -> "jnz     short loc_4026EE
+";
+		"jnz     short loc_4026EE
+" -> "jnz     short loc_402701
+";
+		"jnz     short loc_4026EE
+" -> "jnz     short loc_402701
+";
+		"jnz     short loc_4026EE
+" -> "jmp     short loc_402701
+";
+		"jnz     short loc_4026EE
+" -> "jnz     short loc_4026EE
+";
+	}
+	subgraph sub_4032B4 {
+		sub_4032B4 -> "call    sub_4032A4
+retn    4
+"		 [color=blue];
+	}
+	subgraph VirtualAlloc {
+		VirtualAlloc -> "jmp     ds __imp_VirtualAlloc
+"		 [color=blue];
+	}
+	subgraph lstrcmpA {
+		lstrcmpA -> "jmp     ds __imp_lstrcmpA
+"		 [color=blue];
+	}
+	subgraph WriteFile {
+		WriteFile -> "jmp     ds __imp_WriteFile
+"		 [color=blue];
+	}
+	subgraph HeapAlloc {
+		HeapAlloc -> "jmp     ds __imp_HeapAlloc
+"		 [color=blue];
+	}
+	subgraph sub_403318 {
+		sub_403318 -> 1		 [color=blue];
+		sub_403318 -> "retn    0Ch
+"		 [color=blue];
+		1 -> "jnz     short loc_40338B
+";
+		"retn    0Ch
+" -> sub_403318		 [color=red];
+		"jnz     short loc_40338B
+" -> "jle     short loc_403386
+";
+		"jnz     short loc_40338B
+" -> "call    VirtualAlloc
+call    sub_401510
+";
+		"jle     short loc_403386
+" -> "call    VirtualAlloc
+call    sub_401538
+";
+		"jle     short loc_403386
+" -> "jmp     short loc_4033C9
+";
+		"call    VirtualAlloc
+call    sub_401510
+" -> "jnz     loc_403349
+";
+		"call    VirtualAlloc
+call    sub_401538
+" -> "jmp     short loc_4033C9
+";
+		"jmp     short loc_4033C9
+" -> "jnz     loc_403349
+";
+		"jnz     loc_403349
+" -> "retn    0Ch
+";
+		"jnz     loc_403349
+" -> "jnz     short loc_40338B
+";
+	}
+	subgraph sub_4033DC {
+		5 -> "jnz     short loc_40344E
+";
+		"retn    8
+" -> sub_4033DC		 [color=red];
+		3 -> "jnz     short loc_40347B
+";
+		sub_4033DC -> "retn    8
+"		 [color=blue];
+		sub_4033DC -> "jmp     short loc_40348E
+"		 [color=blue];
+		"jmp     short loc_40348E
+" -> "ja      loc_403413
+";
+		"ja      loc_403413
+" -> "retn    8
+";
+		"ja      loc_403413
+" -> "call    sub_40107C
+jb      short loc_403482
+";
+		"call    sub_40107C
+jb      short loc_403482
+" -> 3;
+		"call    sub_40107C
+jb      short loc_403482
+" -> 7;
+		7 -> "ja      loc_403413
+";
+		"jnz     short loc_40347B
+" -> 5;
+		"jnz     short loc_40347B
+" -> "jnz     short loc_40344E
+";
+		"jnz     short loc_40344E
+" -> 7;
+		"jnz     short loc_40344E
+" -> "jnz     short loc_40347B
+";
+	}
+	subgraph sub_4034A8 {
+		"retn    4
+" -> sub_4034A8		 [color=red];
+		sub_4034A8 -> "retn    4
+"		 [color=blue];
+		sub_4034A8 -> "jmp     loc_403627
+"		 [color=blue];
+		"jmp     loc_403627
+" -> "call    IsBadReadPtr
+jnz     short loc_403643
+";
+		"call    IsBadReadPtr
+jnz     short loc_403643
+" -> "retn    4
+";
+		"call    IsBadReadPtr
+jnz     short loc_403643
+" -> "jnz     loc_4034F0
+";
+		"call    LoadLibraryA
+jnz     short loc_40350F
+" -> "jmp     loc_403643
+";
+		"call    LoadLibraryA
+jnz     short loc_40350F
+" -> "jnz     short loc_403529
+";
+		"jmp     loc_403643
+" -> "retn    4
+";
+		"jmp     loc_403643
+" -> "retn    4
+";
+		"jnz     short loc_403529
+" -> "call    sub_401448
+";
+		"jnz     short loc_403529
+" -> "call    sub_40146C
+jnz     short loc_403559
+";
+		"call    sub_401448
+" -> "call    sub_40146C
+jnz     short loc_403559
+";
+		"call    sub_40146C
+jnz     short loc_403559
+" -> "jmp     loc_403643
+";
+		"call    sub_40146C
+jnz     short loc_403559
+" -> "jz      short loc_40359A
+";
+		"jz      short loc_40359A
+" -> "jmp     loc_40361A
+";
+		"jz      short loc_40359A
+" -> "jmp     short loc_40361A
+";
+		"jmp     loc_40361A
+" -> "jnz     short loc_4035B4
+";
+		"jmp     short loc_40361A
+" -> "jnz     short loc_4035B4
+";
+		"jnz     short loc_4035B4
+" -> "call    sub_403308
+jz      short loc_4035DA
+";
+		"jnz     short loc_4035B4
+" -> 18;
+		"call    sub_403308
+jz      short loc_4035DA
+" -> "call    sub_4032F8
+call    GetProcAddress
+jmp     short loc_403604
+";
+		"call    sub_403308
+jz      short loc_4035DA
+" -> "call    sub_401510
+call    GetProcAddress
+";
+		"call    sub_4032F8
+call    GetProcAddress
+jmp     short loc_403604
+" -> "jnz     short loc_403612
+";
+		"call    sub_401510
+call    GetProcAddress
+" -> "jnz     short loc_403612
+";
+		"jnz     short loc_403612
+" -> "jmp     short loc_403623
+";
+		"jnz     short loc_403612
+" -> 16;
+		"jmp     short loc_403623
+" -> 18;
+		16 -> "jnz     short loc_4035B4
+";
+		18 -> "call    IsBadReadPtr
+jnz     short loc_403643
+";
+		"jnz     loc_4034F0
+" -> "retn    4
+";
+		"jnz     loc_4034F0
+" -> "call    LoadLibraryA
+jnz     short loc_40350F
+";
+	}
+	subgraph sub_4036C8 {
+		"retn    4
+" -> sub_4036C8		 [color=red];
+		5 -> "jnz     short loc_40377A
+";
+		1 -> "jz      short loc_403717
+";
+		sub_4036C8 -> "retn    4
+"		 [color=blue];
+		sub_4036C8 -> 1		 [color=blue];
+		"jz      short loc_403717
+" -> "call    VirtualFree
+jmp     short loc_40377D
+";
+		"jz      short loc_403717
+" -> "call    sub_403650
+jz      short loc_403737
+";
+		"call    VirtualFree
+jmp     short loc_40377D
+" -> "jnz     loc_4036F4
+";
+		"call    sub_403650
+jz      short loc_403737
+" -> 5;
+		"call    sub_403650
+jz      short loc_403737
+" -> "jnz     short loc_40377A
+";
+		"jnz     loc_4036F4
+" -> "retn    4
+";
+		"jnz     loc_4036F4
+" -> "jz      short loc_403717
+";
+		"jnz     short loc_40377A
+" -> "jz      short loc_40374F
+";
+		"jnz     short loc_40377A
+" -> 13;
+		"jz      short loc_40374F
+" -> "jmp     short loc_40375C
+";
+		"jz      short loc_40374F
+" -> "jz      short loc_40375C
+";
+		13 -> "jnz     loc_4036F4
+";
+		"jmp     short loc_40375C
+" -> "jbe     short loc_40377A
+";
+		"jz      short loc_40375C
+" -> "jbe     short loc_40377A
+";
+		"jz      short loc_40375C
+" -> 10;
+		"jbe     short loc_40377A
+" -> 13;
+		"jbe     short loc_40377A
+" -> "call    VirtualProtect
+jz      short loc_403784
+";
+		10 -> "jbe     short loc_40377A
+";
+		"call    VirtualProtect
+jz      short loc_403784
+" -> "retn    4
+";
+		"call    VirtualProtect
+jz      short loc_403784
+" -> 13;
+	}
+	subgraph sub_402AF8 {
+		retn -> sub_402AF8		 [color=red];
+		3 -> "call    sub_40288C
+call    sub_402764
+call    sub_40270C
+call    sub_40277C
+call    sub_40279C
+call    sub_4014D0
+jz      loc_402C61
+";
+		sub_402AF8 -> retn		 [color=blue];
+		sub_402AF8 -> "jz      short loc_402B46
+"		 [color=blue];
+		"jz      short loc_402B46
+" -> 3;
+		"jz      short loc_402B46
+" -> "call    eax
+jmp     short loc_402B4B
+";
+		"call    eax
+jmp     short loc_402B4B
+" -> "call    sub_40288C
+call    sub_402764
+call    sub_40270C
+call    sub_40277C
+call    sub_40279C
+call    sub_4014D0
+jz      loc_402C61
+";
+		"call    sub_40288C
+call    sub_402764
+call    sub_40270C
+call    sub_40277C
+call    sub_40279C
+call    sub_4014D0
+jz      loc_402C61
+" -> retn;
+		"call    sub_40288C
+call    sub_402764
+call    sub_40270C
+call    sub_40277C
+call    sub_40279C
+call    sub_4014D0
+jz      loc_402C61
+" -> "call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+";
+		"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> retn;
+	}
+	subgraph sub_404C18 {
+		retn -> sub_404C18		 [color=red];
+		"call    Sleep
+" -> "call    sub_4014B4
+jz      loc_404CF1
+";
+		"call    sub_401438
+" -> retn;
+		"call    sub_401438
+" -> "call    sub_401438
+";
+		sub_404C18 -> "call    Sleep
+"		 [color=blue];
+		sub_404C18 -> "call    sub_4014B4
+jz      loc_404CF1
+"		 [color=blue];
+		"call    sub_4014B4
+jz      loc_404CF1
+" -> retn;
+		"call    sub_4014B4
+jz      loc_404CF1
+" -> "call    sub_4014B4
+jz      short loc_404CE9
+";
+		"call    sub_4014B4
+jz      short loc_404CE9
+" -> "call    sub_401438
+";
+		"call    sub_4014B4
+jz      short loc_404CE9
+" -> "call    sub_401538
+call    sub_4025E4
+jle     short loc_404CE0
+";
+		"call    sub_401538
+call    sub_4025E4
+jle     short loc_404CE0
+" -> "call    sub_401438
+";
+		"call    sub_401538
+call    sub_4025E4
+jle     short loc_404CE0
+" -> "call    sub_401508
+call    lstrcpyW
+call    CreateThread
+jmp     short loc_404CF1
+";
+		"call    sub_401508
+call    lstrcpyW
+call    CreateThread
+jmp     short loc_404CF1
+" -> retn;
+	}
+	subgraph sub_404C00 {
+		retn -> sub_404C00		 [color=red];
+		1 -> retn;
+		sub_404C00 -> retn		 [color=blue];
+		sub_404C00 -> 1		 [color=blue];
+	}
+	subgraph sub_405504 {
+		1 -> "call    GetDriveTypeW
+jz      short loc_405580
+";
+		sub_405504 -> 1		 [color=blue];
+		sub_405504 -> "call    lstrlenW
+call    sub_4031C0
+retn
+"		 [color=blue];
+		"call    GetDriveTypeW
+jz      short loc_405580
+" -> "jz      short loc_405572
+";
+		"call    GetDriveTypeW
+jz      short loc_405580
+" -> "jmp     short loc_40558C
+";
+		"jz      short loc_405572
+" -> "jmp     short loc_40558C
+";
+		"jz      short loc_405572
+" -> "jz      short loc_405579
+";
+		"jmp     short loc_40558C
+" -> "call    wsprintfW
+call    lstrcatW
+jnz     short loc_405555
+";
+		"jmp     short loc_40558C
+" -> "call    wsprintfW
+call    lstrcatW
+jnz     short loc_405555
+";
+		"jmp     short loc_40558C
+" -> "call    wsprintfW
+call    lstrcatW
+jnz     short loc_405555
+";
+		"jz      short loc_405579
+" -> "jmp     short loc_40558C
+";
+		"jz      short loc_405579
+" -> "jmp     short loc_405587
+";
+		"jmp     short loc_405587
+" -> 9;
+		9 -> "call    wsprintfW
+call    lstrcatW
+jnz     short loc_405555
+";
+		"call    wsprintfW
+call    lstrcatW
+jnz     short loc_405555
+" -> "call    lstrlenW
+call    sub_4031C0
+retn
+";
+		"call    wsprintfW
+call    lstrcatW
+jnz     short loc_405555
+" -> "call    GetDriveTypeW
+jz      short loc_405580
+";
+	}
+	subgraph sub_4055F4 {
+		retn -> sub_4055F4		 [color=red];
+		"call    lstrcatW
+" -> "call    lstrcatW
+call    sub_4014D0
+jz      loc_405842
+";
+		"call    sub_401438
+" -> "call    sub_4031C0
+";
+		sub_4055F4 -> "call    GetDiskFreeSpaceExW
+jnz     short loc_40567B
+"		 [color=blue];
+		sub_4055F4 -> "call    lstrcpynW
+call    lstrlenW
+jz      short loc_4056B8
+"		 [color=blue];
+		"call    GetDiskFreeSpaceExW
+jnz     short loc_40567B
+" -> "call    lstrcpynW
+call    lstrlenW
+jz      short loc_4056B8
+";
+		"call    GetDiskFreeSpaceExW
+jnz     short loc_40567B
+" -> "call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+jmp     loc_405851
+";
+		"call    lstrcpynW
+call    lstrlenW
+jz      short loc_4056B8
+" -> "call    lstrcatW
+";
+		"call    lstrcpynW
+call    lstrlenW
+jz      short loc_4056B8
+" -> "call    lstrcatW
+call    sub_4014D0
+jz      loc_405842
+";
+		"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+jmp     loc_405851
+" -> retn;
+		"call    lstrcatW
+call    sub_4014D0
+jz      loc_405842
+" -> "call    FindFirstFileW
+jz      loc_4057EA
+";
+		"call    lstrcatW
+call    sub_4014D0
+jz      loc_405842
+" -> "call    sub_4031C0
+";
+		"call    FindFirstFileW
+jz      loc_4057EA
+" -> "call    lstrlenW
+jnz     short loc_405716
+";
+		"call    FindFirstFileW
+jz      loc_4057EA
+" -> "call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+call    sub_401438
+jmp     short loc_405851
+";
+		"call    sub_4031C0
+" -> retn;
+		"call    lstrlenW
+jnz     short loc_405716
+" -> "jz      loc_4057AB
+";
+		"call    lstrlenW
+jnz     short loc_405716
+" -> "call    sub_401538
+jz      short loc_40574C
+";
+		"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+call    sub_401438
+jmp     short loc_405851
+" -> retn;
+		"jz      loc_4057AB
+" -> "call    sub_401538
+jz      short loc_40574C
+";
+		"jz      loc_4057AB
+" -> "call    FindNextFileW
+jnz     loc_4056FD
+";
+		"call    sub_401538
+jz      short loc_40574C
+" -> "call    wsprintfW
+jmp     short loc_40576D
+";
+		"call    sub_401538
+jz      short loc_40574C
+" -> "call    wsprintfW
+";
+		"call    FindNextFileW
+jnz     loc_4056FD
+" -> "call    lstrlenW
+jnz     short loc_405716
+";
+		"call    FindNextFileW
+jnz     loc_4056FD
+" -> "jz      short loc_4057E2
+";
+		"call    wsprintfW
+jmp     short loc_40576D
+" -> "call    lstrcatW
+jle     short loc_4057AB
+";
+		"call    wsprintfW
+" -> "call    lstrcatW
+jle     short loc_4057AB
+";
+		"call    lstrcatW
+jle     short loc_4057AB
+" -> "call    FindNextFileW
+jnz     loc_4056FD
+";
+		"call    lstrcatW
+jle     short loc_4057AB
+" -> "call    sub_4031C0
+call    sub_401538
+";
+		"call    sub_4031C0
+call    sub_401538
+" -> "call    FindNextFileW
+jnz     loc_4056FD
+";
+		"call    sub_4031C0
+call    sub_401538
+" -> "call    FindClose
+jmp     short loc_40583A
+";
+		"jz      short loc_4057E2
+" -> "call    sub_4031C0
+call    sub_401538
+";
+		"jz      short loc_4057E2
+" -> "call    FindClose
+jmp     short loc_40583A
+";
+		"call    FindClose
+jmp     short loc_40583A
+" -> "call    sub_401438
+";
+	}
+	subgraph sub_404D90 {
+		"call    lstrcatW
+" -> "call    lstrcatW
+call    sub_4014B4
+jz      loc_404F0B
+";
+		"call    sub_401438
+" -> "call    sub_4031C0
+retn
+";
+		"call    sub_4031C0
+call    sub_401538
+" -> "call    FindNextFileW
+jnz     loc_404E28
+";
+		"call    sub_4031C0
+call    sub_401538
+" -> "call    FindClose
+";
+		sub_404D90 -> "call    lstrcatW
+"		 [color=blue];
+		sub_404D90 -> "call    lstrcatW
+call    sub_4014B4
+jz      loc_404F0B
+"		 [color=blue];
+		"call    lstrcatW
+call    sub_4014B4
+jz      loc_404F0B
+" -> "call    FindFirstFileW
+jz      loc_404F02
+";
+		"call    lstrcatW
+call    sub_4014B4
+jz      loc_404F0B
+" -> "call    sub_4031C0
+retn
+";
+		"call    FindFirstFileW
+jz      loc_404F02
+" -> "call    sub_401438
+";
+		"call    FindFirstFileW
+jz      loc_404F02
+" -> "call    lstrlenW
+jnz     short loc_404E43
+";
+		"call    lstrlenW
+jnz     short loc_404E43
+" -> "jz      short loc_404EC1
+";
+		"call    lstrlenW
+jnz     short loc_404E43
+" -> "call    sub_401538
+jnz     short loc_404EC1
+";
+		"jz      short loc_404EC1
+" -> "call    sub_401538
+jnz     short loc_404EC1
+";
+		"jz      short loc_404EC1
+" -> "call    FindNextFileW
+jnz     loc_404E28
+";
+		"call    sub_401538
+jnz     short loc_404EC1
+" -> "call    FindNextFileW
+jnz     loc_404E28
+";
+		"call    sub_401538
+jnz     short loc_404EC1
+" -> "call    wsprintfW
+call    lstrcatW
+jle     short loc_404EC1
+";
+		"call    FindNextFileW
+jnz     loc_404E28
+" -> "call    lstrlenW
+jnz     short loc_404E43
+";
+		"call    FindNextFileW
+jnz     loc_404E28
+" -> "jz      short loc_404EFC
+";
+		"call    wsprintfW
+call    lstrcatW
+jle     short loc_404EC1
+" -> "call    sub_4031C0
+call    sub_401538
+";
+		"call    wsprintfW
+call    lstrcatW
+jle     short loc_404EC1
+" -> "call    FindNextFileW
+jnz     loc_404E28
+";
+		"jz      short loc_404EFC
+" -> "call    sub_4031C0
+call    sub_401538
+";
+		"jz      short loc_404EFC
+" -> "call    FindClose
+";
+		"call    FindClose
+" -> "call    sub_401438
+";
+	}
+	subgraph sub_404CF8 {
+		retn -> sub_404CF8		 [color=red];
+		"call    sub_401438
+" -> retn;
+		"call    sub_4031C0
+" -> "call    sub_401438
+";
+		sub_404CF8 -> retn		 [color=blue];
+		sub_404CF8 -> "call    sub_401538
+call    sub_4025E4
+jle     short loc_404D78
+"		 [color=blue];
+		"call    sub_401538
+call    sub_4025E4
+jle     short loc_404D78
+" -> "call    sub_401438
+";
+		"call    sub_401538
+call    sub_4025E4
+jle     short loc_404D78
+" -> "call    sub_401508
+call    CopyFileW
+jz      short loc_404D68
+";
+		"call    sub_401508
+call    CopyFileW
+jz      short loc_404D68
+" -> "call    sub_4031C0
+";
+		"call    sub_401508
+call    CopyFileW
+jz      short loc_404D68
+" -> "call    sub_4031C0
+jmp     short loc_404D78
+";
+		"call    sub_4031C0
+jmp     short loc_404D78
+" -> "call    sub_401438
+";
+	}
+	subgraph sub_405440 {
+		retn -> sub_405440		 [color=red];
+		"call    sub_4031C0
+" -> retn;
+		sub_405440 -> "call    sub_4031C0
+"		 [color=blue];
+		sub_405440 -> "call    sub_4031C0
+jmp     short loc_405472
+"		 [color=blue];
+		"call    sub_4031C0
+jmp     short loc_405472
+" -> retn;
+	}
+	subgraph sub_4054D4 {
+		sub_4054D4 -> "call    sub_4031C0
+retn
+"		 [color=blue];
+		sub_4054D4 -> "call    sub_4031C0
+retn
+"		 [color=blue];
+	}
+	subgraph sub_405478 {
+		retn -> sub_405478		 [color=red];
+		"call    sub_4031C0
+" -> retn;
+		sub_405478 -> "call    sub_4031C0
+"		 [color=blue];
+		sub_405478 -> "call    sub_4031C0
+jmp     short loc_4054CD
+"		 [color=blue];
+		"call    sub_4031C0
+jmp     short loc_4054CD
+" -> retn;
+	}
+	subgraph sub_40540C {
+		sub_40540C -> "call    sub_4031C0
+retn
+"		 [color=blue];
+		sub_40540C -> "call    sub_4031C0
+retn
+"		 [color=blue];
+	}
+	subgraph sub_40537C {
+		retn -> sub_40537C		 [color=red];
+		"call    sub_401438
+" -> retn;
+		"call    sub_4031C0
+" -> "call    sub_401438
+";
+		sub_40537C -> retn		 [color=blue];
+		sub_40537C -> "call    sub_401538
+call    sub_4025E4
+jle     short loc_4053FB
+"		 [color=blue];
+		"call    sub_401538
+call    sub_4025E4
+jle     short loc_4053FB
+" -> "call    sub_401438
+";
+		"call    sub_401538
+call    sub_4025E4
+jle     short loc_4053FB
+" -> "call    sub_401508
+call    MoveFileW
+jz      short loc_4053EC
+";
+		"call    sub_401508
+call    MoveFileW
+jz      short loc_4053EC
+" -> "call    sub_4031C0
+";
+		"call    sub_401508
+call    MoveFileW
+jz      short loc_4053EC
+" -> "call    sub_4031C0
+jmp     short loc_4053FB
+";
+		"call    sub_4031C0
+jmp     short loc_4053FB
+" -> "call    sub_401438
+";
+	}
+	subgraph sub_405294 {
+		retn -> sub_405294		 [color=red];
+		sub_405294 -> retn		 [color=blue];
+		sub_405294 -> "call    CreateThread
+"		 [color=blue];
+		"call    CreateThread
+" -> retn;
+	}
+	subgraph sub_4052FC {
+		retn -> sub_4052FC		 [color=red];
+		"call    sub_4031C0
+" -> retn;
+		sub_4052FC -> retn		 [color=blue];
+		sub_4052FC -> "jnz     short loc_405377
+"		 [color=blue];
+		"jnz     short loc_405377
+" -> retn;
+		"jnz     short loc_405377
+" -> "jz      short loc_405377
+";
+		"jz      short loc_405377
+" -> retn;
+		"jz      short loc_405377
+" -> "call    CloseHandle
+jz      short loc_405364
+";
+		"call    CloseHandle
+jz      short loc_405364
+" -> "call    sub_4031C0
+";
+		"call    CloseHandle
+jz      short loc_405364
+" -> "call    sub_4031C0
+jmp     short loc_405377
+";
+		"call    sub_4031C0
+jmp     short loc_405377
+" -> retn;
+	}
+	subgraph sub_40601C {
+		"call    wsprintfW
+" -> "call    lstrcatW
+jl      short loc_4061DE
+";
+		"call    sub_4031C0
+call    sub_401538
+" -> "call    sub_405B8C
+jnz     loc_40607B
+";
+		"call    sub_4031C0
+call    sub_401538
+" -> "call    CloseHandle
+call    sub_401438
+";
+		sub_40601C -> "call    sub_4031C0
+retn
+"		 [color=blue];
+		sub_40601C -> "call    sub_405B4C
+call    sub_405B6C
+"		 [color=blue];
+		"call    sub_405B4C
+call    sub_405B6C
+" -> "jz      loc_4061DE
+";
+		"jz      loc_4061DE
+" -> "jz      loc_4061DE
+";
+		"jz      loc_4061DE
+" -> "call    sub_405B8C
+jnz     loc_40607B
+";
+		"jz      loc_4061DE
+" -> "call    sub_405B8C
+jnz     loc_40607B
+";
+		"jz      loc_4061DE
+" -> "call    lstrcpyW
+call    OpenProcess
+jz      short loc_406110
+";
+		"call    sub_405B8C
+jnz     loc_40607B
+" -> "jz      loc_4061DE
+";
+		"call    sub_405B8C
+jnz     loc_40607B
+" -> "jz      short loc_406219
+";
+		"call    lstrcpyW
+call    OpenProcess
+jz      short loc_406110
+" -> "call    sub_405F50
+jnz     short loc_4060F7
+";
+		"call    lstrcpyW
+call    OpenProcess
+jz      short loc_406110
+" -> "call    GetCurrentProcessId
+jnz     short loc_406128
+";
+		"call    sub_405F50
+jnz     short loc_4060F7
+" -> "call    lstrcpyW
+";
+		"call    sub_405F50
+jnz     short loc_4060F7
+" -> "call    sub_405F80
+call    CloseHandle
+";
+		"call    GetCurrentProcessId
+jnz     short loc_406128
+" -> "jnz     short loc_406166
+";
+		"call    GetCurrentProcessId
+jnz     short loc_406128
+" -> "call    wsprintfW
+jmp     short loc_4061A2
+";
+		"call    lstrcpyW
+" -> "call    sub_405F80
+call    CloseHandle
+";
+		"call    sub_405F80
+call    CloseHandle
+" -> "call    GetCurrentProcessId
+jnz     short loc_406128
+";
+		"jnz     short loc_406166
+" -> "call    wsprintfW
+";
+		"jnz     short loc_406166
+" -> "call    wsprintfW
+jmp     short loc_4061A2
+";
+		"call    wsprintfW
+jmp     short loc_4061A2
+" -> "call    lstrcatW
+jl      short loc_4061DE
+";
+		"call    lstrcatW
+jl      short loc_4061DE
+" -> "call    sub_4031C0
+call    sub_401538
+";
+		"call    lstrcatW
+jl      short loc_4061DE
+" -> "call    sub_405B8C
+jnz     loc_40607B
+";
+		"jz      short loc_406219
+" -> "call    sub_4031C0
+call    sub_401538
+";
+		"jz      short loc_406219
+" -> "call    CloseHandle
+call    sub_401438
+";
+		"call    CloseHandle
+call    sub_401438
+" -> "call    sub_4031C0
+retn
+";
+	}
+	subgraph sub_405FDC {
+		sub_405FDC -> "call    sub_4031C0
+retn
+"		 [color=blue];
+		sub_405FDC -> "call    TerminateProcess
+jz      short loc_40600C
+"		 [color=blue];
+		"call    TerminateProcess
+jz      short loc_40600C
+" -> "call    sub_4031C0
+retn
+";
+		"call    TerminateProcess
+jz      short loc_40600C
+" -> "call    sub_4031C0
+retn
+";
+	}
+	subgraph sub_40686C {
+		"call    sub_401438
+" -> "call    sub_4031C0
+retn
+";
+		"call    sub_4031C0
+" -> "call    sub_401438
+";
+		sub_40686C -> "call    sub_4031C0
+retn
+"		 [color=blue];
+		sub_40686C -> "call    EnumWindows
+jz      short loc_4068D6
+"		 [color=blue];
+		"call    EnumWindows
+jz      short loc_4068D6
+" -> "call    sub_401438
+";
+		"call    EnumWindows
+jz      short loc_4068D6
+" -> "call    sub_4031C0
+";
+	}
+	subgraph sub_40671C {
+		sub_40671C -> "call    SendMessageW
+call    sub_4031C0
+retn
+"		 [color=blue];
+	}
+	subgraph sub_40673C {
+		sub_40673C -> "call    ShowWindow
+call    sub_4031C0
+retn
+"		 [color=blue];
+	}
+	subgraph sub_406758 {
+		sub_406758 -> "call    ShowWindow
+call    sub_4031C0
+retn
+"		 [color=blue];
+	}
+	subgraph sub_406414 {
+		6 -> "call    sub_401538
+call    sub_401538
+call    GetServiceDisplayNameW
+call    sub_4063C4
+call    wsprintfW
+call    lstrcatW
+jl      \
+short loc_40656C
+";
+		"call    sub_4031C0
+call    sub_401538
+" -> "jnz     loc_4064C6
+";
+		"call    sub_4031C0
+call    sub_401538
+" -> "call    CloseServiceHandle
+call    sub_401438
+";
+		sub_406414 -> "jnz     short loc_40641E
+"		 [color=blue];
+		"jnz     short loc_40641E
+" -> "jnz     short loc_40641E
+";
+		"jnz     short loc_40641E
+" -> "call    sub_4031C0
+call    sub_4014D0
+jz      loc_4065BB
+";
+		"call    sub_4031C0
+call    sub_4014D0
+jz      loc_4065BB
+" -> "call    sub_4031C0
+retn
+";
+		"call    sub_4031C0
+call    sub_4014D0
+jz      loc_4065BB
+" -> "call    OpenSCManagerW
+jz      loc_406581
+";
+		"call    OpenSCManagerW
+jz      loc_406581
+" -> 4;
+		"call    OpenSCManagerW
+jz      loc_406581
+" -> "jz      short loc_4065A8
+";
+		4 -> "call    EnumServicesStatusW
+jl      loc_406576
+";
+		"jz      short loc_4065A8
+" -> "call    sub_4031C0
+call    sub_401538
+";
+		"jz      short loc_4065A8
+" -> "call    CloseServiceHandle
+call    sub_401438
+";
+		"call    EnumServicesStatusW
+jl      loc_406576
+" -> 6;
+		"call    EnumServicesStatusW
+jl      loc_406576
+" -> "jnz     loc_406487
+";
+		"jnz     loc_406487
+" -> "jz      short loc_4065A8
+";
+		"jnz     loc_406487
+" -> "call    EnumServicesStatusW
+jl      loc_406576
+";
+		"call    sub_401538
+call    sub_401538
+call    GetServiceDisplayNameW
+call    sub_4063C4
+call    wsprintfW
+call    lstrcatW
+jl      \
+short loc_40656C
+" -> "call    sub_4031C0
+call    sub_401538
+";
+		"call    sub_401538
+call    sub_401538
+call    GetServiceDisplayNameW
+call    sub_4063C4
+call    wsprintfW
+call    lstrcatW
+jl      \
+short loc_40656C
+" -> "jnz     loc_4064C6
+";
+		"jnz     loc_4064C6
+" -> "jnz     loc_406487
+";
+		"jnz     loc_4064C6
+" -> "call    sub_401538
+call    sub_401538
+call    GetServiceDisplayNameW
+call    sub_4063C4
+call    wsprintfW
+call    lstrcatW
+jl      \
+short loc_40656C
+";
+		"call    CloseServiceHandle
+call    sub_401438
+" -> "call    sub_4031C0
+retn
+";
+	}
+	subgraph sub_401854 {
+		retn -> sub_401854		 [color=red];
+		2 -> "call    RegOpenKeyExW
+jz      short loc_4018AC
+";
+		9 -> "call    RegEnumKeyExW
+jz      loc_4018EB
+";
+		"call    sub_4031C0
+" -> retn;
+		"call    sub_4031C0
+call    sub_401538
+" -> 9;
+		"call    sub_4031C0
+call    sub_401538
+" -> "call    sub_4031C0
+";
+		sub_401854 -> 2		 [color=blue];
+		sub_401854 -> "jmp     short loc_401882
+"		 [color=blue];
+		"jmp     short loc_401882
+" -> "call    RegOpenKeyExW
+jz      short loc_4018AC
+";
+		"call    RegOpenKeyExW
+jz      short loc_4018AC
+" -> "call    sub_4031C0
+jmp     loc_4019AD
+";
+		"call    RegOpenKeyExW
+jz      short loc_4018AC
+" -> "call    sub_4014D0
+jz      loc_4019AD
+";
+		"call    sub_4031C0
+jmp     loc_4019AD
+" -> retn;
+		"call    sub_4014D0
+jz      loc_4019AD
+" -> retn;
+		"call    sub_4014D0
+jz      loc_4019AD
+" -> "call    sub_4031C0
+call    sub_4014D0
+jmp     short loc_401949
+";
+		"call    sub_4031C0
+call    sub_4014D0
+jmp     short loc_401949
+" -> "call    RegEnumKeyExW
+jz      loc_4018EB
+";
+		"call    RegEnumKeyExW
+jz      loc_4018EB
+" -> "call    lstrcatW
+call    lstrcatW
+call    lstrlenW
+jle     short loc_401940
+";
+		"call    RegEnumKeyExW
+jz      loc_4018EB
+" -> "call    RegCloseKey
+jz      short loc_4019A0
+";
+		"call    lstrcatW
+call    lstrcatW
+call    lstrlenW
+jle     short loc_401940
+" -> 9;
+		"call    lstrcatW
+call    lstrcatW
+call    lstrlenW
+jle     short loc_401940
+" -> "call    sub_4031C0
+call    sub_401538
+";
+		"call    RegCloseKey
+jz      short loc_4019A0
+" -> "call    sub_4031C0
+";
+		"call    RegCloseKey
+jz      short loc_4019A0
+" -> "call    sub_4031C0
+call    sub_401538
+";
+	}
+	subgraph sub_4019B8 {
+		retn -> sub_4019B8		 [color=red];
+		6 -> "call    RegEnumValueA
+call    sub_4014B4
+jz      loc_401CA8
+";
+		"call    sub_401438
+" -> "call    RegCloseKey
+jz      short loc_401CD6
+";
+		"call    sub_401438
+" -> "jz      loc_401A46
+";
+		3 -> "call    RegOpenKeyExW
+jnz     loc_401CEC
+";
+		16 -> "jnz     short loc_401B16
+";
+		"call    sub_4031C0
+" -> "call    sub_4031C0
+call    sub_401438
+";
+		"call    sub_4031C0
+call    sub_401538
+" -> 31;
+		sub_4019B8 -> retn		 [color=blue];
+		sub_4019B8 -> "call    sub_401818
+call    lstrlenW
+jnz     short loc_4019FA
+"		 [color=blue];
+		"call    sub_401818
+call    lstrlenW
+jnz     short loc_4019FA
+" -> 3;
+		"call    sub_401818
+call    lstrlenW
+jnz     short loc_4019FA
+" -> "jmp     short loc_4019FE
+";
+		"jmp     short loc_4019FE
+" -> "call    RegOpenKeyExW
+jnz     loc_401CEC
+";
+		"call    RegOpenKeyExW
+jnz     loc_401CEC
+" -> retn;
+		"call    RegOpenKeyExW
+jnz     loc_401CEC
+" -> "call    sub_4014EC
+call    sub_4031C0
+jz      loc_401CB9
+";
+		"call    sub_4014EC
+call    sub_4031C0
+jz      loc_401CB9
+" -> 6;
+		"call    sub_4014EC
+call    sub_4031C0
+jz      loc_401CB9
+" -> "call    RegCloseKey
+jz      short loc_401CD6
+";
+		"call    RegCloseKey
+jz      short loc_401CD6
+" -> "call    sub_4031C0
+";
+		"call    RegCloseKey
+jz      short loc_401CD6
+" -> "call    sub_4031C0
+call    sub_401438
+";
+		"call    RegEnumValueA
+call    sub_4014B4
+jz      loc_401CA8
+" -> "call    RegEnumValueA
+jnz     loc_401C9F
+";
+		"call    RegEnumValueA
+call    sub_4014B4
+jz      loc_401CA8
+" -> "jz      loc_401A46
+";
+		"call    RegEnumValueA
+jnz     loc_401C9F
+" -> "call    sub_401438
+";
+		"call    RegEnumValueA
+jnz     loc_401C9F
+" -> "jbe     loc_401BDB
+";
+		"jz      loc_401A46
+" -> "call    sub_401438
+";
+		"jz      loc_401A46
+" -> "call    RegEnumValueA
+call    sub_4014B4
+jz      loc_401CA8
+";
+		"jbe     loc_401BDB
+" -> "jnz     short loc_401AF9
+";
+		"jbe     loc_401BDB
+" -> "call    sub_4014EC
+call    lstrcatA
+";
+		"jnz     short loc_401AF9
+" -> "call    sub_4014EC
+call    wsprintfA
+jmp     loc_401BF8
+";
+		"jnz     short loc_401AF9
+" -> "jnz     short loc_401B63
+";
+		"call    sub_4014EC
+call    lstrcatA
+" -> "call    sub_4014EC
+jz      short loc_401C4C
+";
+		"call    sub_4014EC
+call    wsprintfA
+jmp     loc_401BF8
+" -> "call    sub_4014EC
+jz      short loc_401C4C
+";
+		"call    sub_4014EC
+call    wsprintfA
+jmp     loc_401BF8
+" -> "call    sub_4014EC
+jz      short loc_401C4C
+";
+		"jnz     short loc_401B63
+" -> "jl      short loc_401B3A
+";
+		"jnz     short loc_401B63
+" -> "jnz     short loc_401BBD
+";
+		"call    sub_4014EC
+jz      short loc_401C4C
+" -> "call    sub_401538
+call    wsprintfA
+jmp     short loc_401C52
+";
+		"call    sub_4014EC
+jz      short loc_401C4C
+" -> 28;
+		"jl      short loc_401B3A
+" -> "call    sub_4014EC
+call    wsprintfA
+jmp     loc_401BF8
+";
+		"jl      short loc_401B3A
+" -> 14;
+		"jnz     short loc_401BBD
+" -> "call    sub_4014EC
+jl      short loc_401BF8
+";
+		"jnz     short loc_401BBD
+" -> "call    sub_4014EC
+call    lstrcpyA
+jmp     short loc_401BF8
+";
+		14 -> "jnz     short loc_401B30
+";
+		"jnz     short loc_401B30
+" -> 16;
+		"jnz     short loc_401B30
+" -> "jnz     short loc_401B16
+";
+		"jnz     short loc_401B16
+" -> "call    sub_4014EC
+call    wsprintfA
+jmp     loc_401BF8
+";
+		"jnz     short loc_401B16
+" -> "jnz     short loc_401B30
+";
+		"call    sub_4014EC
+jl      short loc_401BF8
+" -> "call    sub_4014EC
+jz      short loc_401C4C
+";
+		"call    sub_4014EC
+jl      short loc_401BF8
+" -> 21;
+		"call    sub_4014EC
+call    lstrcpyA
+jmp     short loc_401BF8
+" -> "call    sub_4014EC
+jz      short loc_401C4C
+";
+		21 -> "call    wsprintfA
+call    lstrcatA
+jnz     short loc_401B88
+";
+		"call    wsprintfA
+call    lstrcatA
+jnz     short loc_401B88
+" -> "call    wsprintfA
+call    lstrcatA
+jnz     short loc_401B88
+";
+		"call    wsprintfA
+call    lstrcatA
+jnz     short loc_401B88
+" -> "jmp     short loc_401BF8
+";
+		"jmp     short loc_401BF8
+" -> "call    sub_4014EC
+jz      short loc_401C4C
+";
+		"call    sub_401538
+call    wsprintfA
+jmp     short loc_401C52
+" -> "call    sub_401438
+call    lstrcatA_0
+call    sub_401438
+jle     short loc_401C9E
+";
+		28 -> "call    sub_401438
+call    lstrcatA_0
+call    sub_401438
+jle     short loc_401C9E
+";
+		"call    sub_401438
+call    lstrcatA_0
+call    sub_401438
+jle     short loc_401C9E
+" -> "call    sub_4031C0
+call    sub_401538
+";
+		"call    sub_401438
+call    lstrcatA_0
+call    sub_401438
+jle     short loc_401C9E
+" -> 31;
+		31 -> "call    sub_401438
+";
+		"call    sub_4031C0
+call    sub_401438
+" -> retn;
+	}
+	subgraph sub_40223C {
+		retn -> sub_40223C		 [color=red];
+		sub_40223C -> "call    mouse_event
+call    mouse_event
+jmp     short loc_4022A7
+"		 [color=blue];
+		sub_40223C -> "call    mouse_event
+call    mouse_event
+"		 [color=blue];
+		"call    mouse_event
+call    mouse_event
+jmp     short loc_4022A7
+" -> retn;
+		"call    mouse_event
+call    mouse_event
+" -> retn;
+	}
+	subgraph sub_402204 {
+		sub_402204 -> retn		 [color=blue];
+		sub_402204 -> "jle     short loc_402236
+"		 [color=blue];
+		"jle     short loc_402236
+" -> retn;
+		"jle     short loc_402236
+" -> "call    keybd_event
+call    keybd_event
+jnz     short loc_402215
+";
+		"call    keybd_event
+call    keybd_event
+jnz     short loc_402215
+" -> retn;
+		"call    keybd_event
+call    keybd_event
+jnz     short loc_402215
+" -> "call    keybd_event
+call    keybd_event
+jnz     short loc_402215
+";
+	}
+	subgraph send {
+		send -> "jmp     ds __imp_send
+"		 [color=blue];
+	}
+	"call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+" -> CreatePipe	 [color=purple];
+	"call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+" -> GetStartupInfoA	 [color=purple];
+	"call    CreatePipe
+call    CreatePipe
+call    GetStartupInfoA
+call    CreateProcessA
+jnz     short loc_402E94
+" -> CreateProcessA	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+jmp     loc_402F95
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+call    CloseHandle
+jmp     loc_402F95
+" -> CloseHandle	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    SetNamedPipeHandleState
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    SetNamedPipeHandleState
+" -> CloseHandle	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+call    CloseHandle
+call    SetNamedPipeHandleState
+" -> SetNamedPipeHandleState	 [color=purple];
+	"call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+" -> Sleep	 [color=purple];
+	"call    Sleep
+call    GetExitCodeProcess
+jnz     short loc_402F43
+" -> GetExitCodeProcess	 [color=purple];
+	"call    ReadFile
+jbe     short loc_402ED9
+" -> ReadFile	 [color=purple];
+	"call    GetExitCodeProcess
+jnz     short loc_402F6A
+" -> GetExitCodeProcess	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+jmp     short loc_402ED9
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+jmp     short loc_402ED9
+" -> sub_401538	 [color=purple];
+	"call    TerminateProcess
+" -> TerminateProcess	 [color=purple];
+	"call    TerminateProcess
+" -> TerminateProcess	 [color=purple];
+	"call    CloseHandle
+call    CloseHandle
+call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    CloseHandle
+call    CloseHandle
+call    sub_4031C0
+" -> CloseHandle	 [color=purple];
+	"call    LoadLibraryA
+jnb     short loc_405C0C
+" -> LoadLibraryA	 [color=purple];
+	"call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+" -> GetProcAddress	 [color=purple];
+	"call    sub_401538
+jle     short loc_403219
+" -> sub_401538	 [color=purple];
+	"call    send
+jnz     short loc_403249
+" -> send	 [color=purple];
+	"call    sub_401510
+" -> sub_401510	 [color=purple];
+	"call    sub_401510
+" -> sub_401510	 [color=purple];
+	"call    GetTickCount
+" -> GetTickCount	 [color=purple];
+	"call    Sleep
+retn    4
+" -> Sleep	 [color=purple];
+	"call    sub_401518
+retn
+" -> sub_401518	 [color=purple];
+	"call    sub_4013F8
+retn
+" -> sub_4013F8	 [color=purple];
+	"call    sub_4013F8
+retn
+" -> sub_4013F8	 [color=purple];
+	"call    VirtualAlloc
+retn
+" -> VirtualAlloc	 [color=purple];
+	"call    VirtualAlloc
+retn
+" -> VirtualAlloc	 [color=purple];
+	"call    VirtualAlloc
+retn
+" -> VirtualAlloc	 [color=purple];
+	"call    sub_4025E4
+jl      loc_401E2C
+" -> sub_4025E4	 [color=purple];
+	"call    sub_4014B4
+call    sub_4014B4
+jz      short loc_401E1B
+" -> sub_4014B4	 [color=purple];
+	"call    sub_401538
+call    sub_401510
+call    lstrlenW
+call    lstrlenW
+call    WideCharToMultiByte
+call    sub_401438
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    sub_401510
+call    lstrlenW
+call    lstrlenW
+call    WideCharToMultiByte
+call    sub_401438
+" -> sub_401510	 [color=purple];
+	"call    sub_401538
+call    sub_401510
+call    lstrlenW
+call    lstrlenW
+call    WideCharToMultiByte
+call    sub_401438
+" -> lstrlenW	 [color=purple];
+	"call    sub_401538
+call    sub_401510
+call    lstrlenW
+call    lstrlenW
+call    WideCharToMultiByte
+call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401538
+call    sub_401510
+call    lstrlenW
+call    lstrlenW
+call    WideCharToMultiByte
+call    sub_401438
+" -> WideCharToMultiByte	 [color=purple];
+	"call    CreateMutexW
+retn    0Ch
+" -> CreateMutexW	 [color=purple];
+	ExitProcess_0 -> ExitProcess	 [color=purple];
+	OutputDebugStringA_0 -> OutputDebugStringA	 [color=purple];
+	"call    GetExitCodeProcess
+jnz     short loc_402D3C
+" -> GetExitCodeProcess	 [color=purple];
+	"call    Sleep
+" -> Sleep	 [color=purple];
+	"call    Sleep
+" -> Sleep	 [color=purple];
+	GetCurrentProcessId -> GetCurrentProcess	 [color=purple];
+	"call    VirtualFree
+retn
+" -> VirtualFree	 [color=purple];
+	closesocket -> socket	 [color=purple];
+	"call    GetModuleFileNameW
+call    sub_402534
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_4025DB
+" -> lstrlenW	 [color=purple];
+	"call    GetModuleFileNameW
+call    sub_402534
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_4025DB
+" -> lstrcmpA	 [color=purple];
+	"call    GetModuleFileNameW
+call    sub_402534
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_4025DB
+" -> GetModuleFileNameW	 [color=purple];
+	"call    GetModuleFileNameW
+call    sub_402534
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_4025DB
+" -> sub_402534	 [color=purple];
+	"call    lstrcatW
+" -> lstrcatW	 [color=purple];
+	"call    lstrcatW
+" -> lstrcatW	 [color=purple];
+	"call    lstrcatW
+" -> lstrcatW	 [color=purple];
+	"call    lstrcatW
+" -> lstrcatW	 [color=purple];
+	"call    lstrcatW
+" -> lstrcatW	 [color=purple];
+	"call    lstrcatW
+" -> lstrcatW	 [color=purple];
+	"call    lstrcatW
+" -> lstrcatW	 [color=purple];
+	"call    sub_401538
+" -> sub_401538	 [color=purple];
+	"call    RegOpenKeyExW
+jnz     short loc_40180B
+" -> RegOpenKeyExW	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401803
+" -> lstrlenW	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401803
+" -> lstrcpyW	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401803
+" -> RegOpenKeyExW	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401803
+" -> sub_401448	 [color=purple];
+	"call    RegDeleteKeyW
+call    RegCloseKey
+jmp     short loc_40180B
+" -> RegCloseKey	 [color=purple];
+	"call    RegDeleteKeyW
+call    RegCloseKey
+jmp     short loc_40180B
+" -> RegDeleteKeyW	 [color=purple];
+	"call    RegDeleteValueW
+call    RegCloseKey
+" -> RegCloseKey	 [color=purple];
+	"call    RegDeleteValueW
+call    RegCloseKey
+" -> RegDeleteValueW	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    CloseHandle
+" -> CloseHandle	 [color=purple];
+	"call    CloseHandle
+" -> CloseHandle	 [color=purple];
+	"call    CloseHandle
+" -> CloseHandle	 [color=purple];
+	"call    CloseHandle
+" -> CloseHandle	 [color=purple];
+	"call    CloseHandle
+" -> CloseHandle	 [color=purple];
+	"call    sub_402D10
+call    shutdown
+call    closesocket
+retn
+" -> sub_402D10	 [color=purple];
+	"call    sub_402D10
+call    shutdown
+call    closesocket
+retn
+" -> shutdown	 [color=purple];
+	"call    sub_402D10
+call    shutdown
+call    closesocket
+retn
+" -> closesocket	 [color=purple];
+	"call    sub_402D10
+call    shutdown
+call    closesocket
+retn
+" -> socket	 [color=purple];
+	"call    RegQueryValueExW
+call    RegCloseKey
+" -> RegCloseKey	 [color=purple];
+	"call    RegQueryValueExW
+call    RegCloseKey
+" -> RegCloseKey	 [color=purple];
+	"call    RegQueryValueExW
+call    RegCloseKey
+" -> RegQueryValueExW	 [color=purple];
+	"call    RegQueryValueExW
+call    RegCloseKey
+" -> RegQueryValueExW	 [color=purple];
+	"call    sub_401538
+call    GetComputerNameW
+retn
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    GetComputerNameW
+retn
+" -> GetComputerNameW	 [color=purple];
+	"call    sub_401538
+call    GetUserNameW
+retn
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    GetUserNameW
+retn
+" -> GetUserNameW	 [color=purple];
+	"call    sub_401538
+call    GetLocaleInfoW
+retn
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    GetLocaleInfoW
+retn
+" -> GetLocaleInfoW	 [color=purple];
+	"call    sub_401538
+call    GetForegroundWindow
+call    GetWindowTextW
+retn
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    GetForegroundWindow
+call    GetWindowTextW
+retn
+" -> GetWindowTextW	 [color=purple];
+	"call    sub_401538
+call    GetForegroundWindow
+call    GetWindowTextW
+retn
+" -> GetForegroundWindow	 [color=purple];
+	"call    GetProcAddress
+jz      short loc_402A15
+" -> GetProcAddress	 [color=purple];
+	"call    sub_401000
+call    sub_401000
+jmp     short loc_402A15
+" -> sub_401000	 [color=purple];
+	"call    sub_401000
+call    sub_401000
+" -> sub_401000	 [color=purple];
+	"call    FreeLibrary
+retn
+" -> FreeLibrary	 [color=purple];
+	"call    FreeLibrary
+retn
+" -> FreeLibrary	 [color=purple];
+	"call    GetProcAddress
+jz      short loc_402AB3
+" -> GetProcAddress	 [color=purple];
+	"call    GetProcAddress
+jz      short loc_4021D5
+" -> GetProcAddress	 [color=purple];
+	"call    GetCurrentProcess
+call    [esp+1Ch+var_14]
+jz      short loc_4021D5
+" -> GetCurrentProcess	 [color=purple];
+	"call    FreeLibrary
+" -> FreeLibrary	 [color=purple];
+	"call    GetLastInputInfo
+call    GetTickCount
+retn
+" -> GetTickCount	 [color=purple];
+	"call    GetLastInputInfo
+call    GetTickCount
+retn
+" -> GetLastInputInfo	 [color=purple];
+	"call    sub_4032A4
+retn    4
+" -> sub_4032A4	 [color=purple];
+	"call    VirtualAlloc
+call    sub_401510
+" -> sub_401510	 [color=purple];
+	"call    VirtualAlloc
+call    sub_401510
+" -> VirtualAlloc	 [color=purple];
+	"call    VirtualAlloc
+call    sub_401538
+" -> sub_401538	 [color=purple];
+	"call    VirtualAlloc
+call    sub_401538
+" -> VirtualAlloc	 [color=purple];
+	"call    sub_40107C
+jb      short loc_403482
+" -> sub_40107C	 [color=purple];
+	"call    IsBadReadPtr
+jnz     short loc_403643
+" -> IsBadReadPtr	 [color=purple];
+	"call    LoadLibraryA
+jnz     short loc_40350F
+" -> LoadLibraryA	 [color=purple];
+	"call    sub_401448
+" -> sub_401448	 [color=purple];
+	"call    sub_40146C
+jnz     short loc_403559
+" -> sub_40146C	 [color=purple];
+	"call    sub_403308
+jz      short loc_4035DA
+" -> sub_403308	 [color=purple];
+	"call    sub_4032F8
+call    GetProcAddress
+jmp     short loc_403604
+" -> GetProcAddress	 [color=purple];
+	"call    sub_4032F8
+call    GetProcAddress
+jmp     short loc_403604
+" -> sub_4032F8	 [color=purple];
+	"call    sub_401510
+call    GetProcAddress
+" -> sub_401510	 [color=purple];
+	"call    sub_401510
+call    GetProcAddress
+" -> GetProcAddress	 [color=purple];
+	"call    VirtualFree
+jmp     short loc_40377D
+" -> VirtualFree	 [color=purple];
+	"call    sub_403650
+jz      short loc_403737
+" -> sub_403650	 [color=purple];
+	"call    VirtualProtect
+jz      short loc_403784
+" -> VirtualProtect	 [color=purple];
+	"call    sub_40288C
+call    sub_402764
+call    sub_40270C
+call    sub_40277C
+call    sub_40279C
+call    sub_4014D0
+jz      loc_402C61
+" -> sub_4014D0	 [color=purple];
+	"call    sub_40288C
+call    sub_402764
+call    sub_40270C
+call    sub_40277C
+call    sub_40279C
+call    sub_4014D0
+jz      loc_402C61
+" -> sub_40288C	 [color=purple];
+	"call    sub_40288C
+call    sub_402764
+call    sub_40270C
+call    sub_40277C
+call    sub_40279C
+call    sub_4014D0
+jz      loc_402C61
+" -> sub_402764	 [color=purple];
+	"call    sub_40288C
+call    sub_402764
+call    sub_40270C
+call    sub_40277C
+call    sub_40279C
+call    sub_4014D0
+jz      loc_402C61
+" -> sub_40270C	 [color=purple];
+	"call    sub_40288C
+call    sub_402764
+call    sub_40270C
+call    sub_40277C
+call    sub_40279C
+call    sub_4014D0
+jz      loc_402C61
+" -> sub_40277C	 [color=purple];
+	"call    sub_40288C
+call    sub_402764
+call    sub_40270C
+call    sub_40277C
+call    sub_40279C
+call    sub_4014D0
+jz      loc_402C61
+" -> sub_40279C	 [color=purple];
+	"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> wsprintfW	 [color=purple];
+	"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> lstrlenW	 [color=purple];
+	"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> sub_4027BC	 [color=purple];
+	"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> sub_402978	 [color=purple];
+	"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> sub_402A64	 [color=purple];
+	"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> sub_402188	 [color=purple];
+	"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> sub_40264C	 [color=purple];
+	"call    sub_401538
+call    sub_4027BC
+call    sub_402978
+call    sub_402978
+call    sub_402A64
+call    sub_402188
+call    sub_40264C
+\
+call    sub_402674
+call    wsprintfW
+call    lstrlenW
+call    sub_4031C0
+" -> sub_402674	 [color=purple];
+	"call    sub_4014B4
+jz      loc_404CF1
+" -> sub_4014B4	 [color=purple];
+	"call    sub_4014B4
+jz      short loc_404CE9
+" -> sub_4014B4	 [color=purple];
+	"call    sub_401538
+call    sub_4025E4
+jle     short loc_404CE0
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    sub_4025E4
+jle     short loc_404CE0
+" -> sub_4025E4	 [color=purple];
+	"call    sub_401508
+call    lstrcpyW
+call    CreateThread
+jmp     short loc_404CF1
+" -> CreateThread	 [color=purple];
+	"call    sub_401508
+call    lstrcpyW
+call    CreateThread
+jmp     short loc_404CF1
+" -> lstrcpyW	 [color=purple];
+	"call    sub_401508
+call    lstrcpyW
+call    CreateThread
+jmp     short loc_404CF1
+" -> sub_401508	 [color=purple];
+	"call    lstrlenW
+call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    lstrlenW
+call    sub_4031C0
+retn
+" -> lstrlenW	 [color=purple];
+	"call    GetDriveTypeW
+jz      short loc_405580
+" -> GetDriveTypeW	 [color=purple];
+	"call    wsprintfW
+call    lstrcatW
+jnz     short loc_405555
+" -> wsprintfW	 [color=purple];
+	"call    wsprintfW
+call    lstrcatW
+jnz     short loc_405555
+" -> lstrcatW	 [color=purple];
+	"call    GetDiskFreeSpaceExW
+jnz     short loc_40567B
+" -> GetDiskFreeSpaceExW	 [color=purple];
+	"call    lstrcpynW
+call    lstrlenW
+jz      short loc_4056B8
+" -> lstrlenW	 [color=purple];
+	"call    lstrcpynW
+call    lstrlenW
+jz      short loc_4056B8
+" -> lstrcpynW	 [color=purple];
+	"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+jmp     loc_405851
+" -> sub_4031C0	 [color=purple];
+	"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+jmp     loc_405851
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+jmp     loc_405851
+" -> lstrcatW	 [color=purple];
+	"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+jmp     loc_405851
+" -> lstrlenW	 [color=purple];
+	"call    lstrcatW
+call    sub_4014D0
+jz      loc_405842
+" -> lstrcatW	 [color=purple];
+	"call    lstrcatW
+call    sub_4014D0
+jz      loc_405842
+" -> sub_4014D0	 [color=purple];
+	"call    FindFirstFileW
+jz      loc_4057EA
+" -> FindFirstFileW	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    lstrlenW
+jnz     short loc_405716
+" -> lstrlenW	 [color=purple];
+	"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+call    sub_401438
+jmp     short loc_405851
+" -> sub_4031C0	 [color=purple];
+	"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+call    sub_401438
+jmp     short loc_405851
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+call    sub_401438
+jmp     short loc_405851
+" -> lstrcatW	 [color=purple];
+	"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+call    sub_401438
+jmp     short loc_405851
+" -> lstrlenW	 [color=purple];
+	"call    sub_401538
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+call    sub_401438
+jmp     short loc_405851
+" -> sub_401438	 [color=purple];
+	"call    sub_401538
+jz      short loc_40574C
+" -> sub_401538	 [color=purple];
+	"call    FindNextFileW
+jnz     loc_4056FD
+" -> FindNextFileW	 [color=purple];
+	"call    wsprintfW
+jmp     short loc_40576D
+" -> wsprintfW	 [color=purple];
+	"call    wsprintfW
+" -> wsprintfW	 [color=purple];
+	"call    wsprintfW
+" -> wsprintfW	 [color=purple];
+	"call    lstrcatW
+jle     short loc_4057AB
+" -> lstrcatW	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_401538	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_401538	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_401538	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_401538	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_401538	 [color=purple];
+	"call    sub_4031C0
+call    sub_401538
+" -> sub_401538	 [color=purple];
+	"call    FindClose
+jmp     short loc_40583A
+" -> FindClose	 [color=purple];
+	"call    lstrcatW
+call    sub_4014B4
+jz      loc_404F0B
+" -> lstrcatW	 [color=purple];
+	"call    lstrcatW
+call    sub_4014B4
+jz      loc_404F0B
+" -> sub_4014B4	 [color=purple];
+	"call    FindFirstFileW
+jz      loc_404F02
+" -> FindFirstFileW	 [color=purple];
+	"call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    lstrlenW
+jnz     short loc_404E43
+" -> lstrlenW	 [color=purple];
+	"call    sub_401538
+jnz     short loc_404EC1
+" -> sub_401538	 [color=purple];
+	"call    FindNextFileW
+jnz     loc_404E28
+" -> FindNextFileW	 [color=purple];
+	"call    wsprintfW
+call    lstrcatW
+jle     short loc_404EC1
+" -> wsprintfW	 [color=purple];
+	"call    wsprintfW
+call    lstrcatW
+jle     short loc_404EC1
+" -> lstrcatW	 [color=purple];
+	"call    FindClose
+" -> FindClose	 [color=purple];
+	"call    FindClose
+" -> FindClose	 [color=purple];
+	"call    sub_401538
+call    sub_4025E4
+jle     short loc_404D78
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    sub_4025E4
+jle     short loc_404D78
+" -> sub_4025E4	 [color=purple];
+	"call    sub_401508
+call    CopyFileW
+jz      short loc_404D68
+" -> sub_401508	 [color=purple];
+	"call    sub_401508
+call    CopyFileW
+jz      short loc_404D68
+" -> CopyFileW	 [color=purple];
+	"call    sub_4031C0
+jmp     short loc_404D78
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+jmp     short loc_405472
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+jmp     short loc_4054CD
+" -> sub_4031C0	 [color=purple];
+	"call    sub_401538
+call    sub_4025E4
+jle     short loc_4053FB
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    sub_4025E4
+jle     short loc_4053FB
+" -> sub_4025E4	 [color=purple];
+	"call    sub_401508
+call    MoveFileW
+jz      short loc_4053EC
+" -> sub_401508	 [color=purple];
+	"call    sub_401508
+call    MoveFileW
+jz      short loc_4053EC
+" -> MoveFileW	 [color=purple];
+	"call    sub_4031C0
+jmp     short loc_4053FB
+" -> sub_4031C0	 [color=purple];
+	"call    CreateThread
+" -> CreateThread	 [color=purple];
+	"call    CloseHandle
+jz      short loc_405364
+" -> CloseHandle	 [color=purple];
+	"call    sub_4031C0
+jmp     short loc_405377
+" -> sub_4031C0	 [color=purple];
+	"call    sub_405B4C
+call    sub_405B6C
+" -> sub_405B4C	 [color=purple];
+	"call    sub_405B4C
+call    sub_405B6C
+" -> sub_405B6C	 [color=purple];
+	"call    sub_405B8C
+jnz     loc_40607B
+" -> sub_405B8C	 [color=purple];
+	"call    lstrcpyW
+call    OpenProcess
+jz      short loc_406110
+" -> lstrcpyW	 [color=purple];
+	"call    lstrcpyW
+call    OpenProcess
+jz      short loc_406110
+" -> OpenProcess	 [color=purple];
+	"call    sub_405F50
+jnz     short loc_4060F7
+" -> sub_405F50	 [color=purple];
+	"call    GetCurrentProcessId
+jnz     short loc_406128
+" -> GetCurrentProcess	 [color=purple];
+	"call    GetCurrentProcessId
+jnz     short loc_406128
+" -> GetCurrentProcessId	 [color=purple];
+	"call    lstrcpyW
+" -> lstrcpyW	 [color=purple];
+	"call    sub_405F80
+call    CloseHandle
+" -> sub_405F80	 [color=purple];
+	"call    sub_405F80
+call    CloseHandle
+" -> CloseHandle	 [color=purple];
+	"call    wsprintfW
+jmp     short loc_4061A2
+" -> wsprintfW	 [color=purple];
+	"call    lstrcatW
+jl      short loc_4061DE
+" -> lstrcatW	 [color=purple];
+	"call    CloseHandle
+call    sub_401438
+" -> CloseHandle	 [color=purple];
+	"call    CloseHandle
+call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    TerminateProcess
+jz      short loc_40600C
+" -> TerminateProcess	 [color=purple];
+	"call    EnumWindows
+jz      short loc_4068D6
+" -> EnumWindows	 [color=purple];
+	"call    SendMessageW
+call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    SendMessageW
+call    sub_4031C0
+retn
+" -> SendMessageW	 [color=purple];
+	"call    ShowWindow
+call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    ShowWindow
+call    sub_4031C0
+retn
+" -> sub_4031C0	 [color=purple];
+	"call    ShowWindow
+call    sub_4031C0
+retn
+" -> ShowWindow	 [color=purple];
+	"call    ShowWindow
+call    sub_4031C0
+retn
+" -> ShowWindow	 [color=purple];
+	"call    sub_4031C0
+call    sub_4014D0
+jz      loc_4065BB
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_4014D0
+jz      loc_4065BB
+" -> sub_4014D0	 [color=purple];
+	"call    OpenSCManagerW
+jz      loc_406581
+" -> OpenSCManagerW	 [color=purple];
+	"call    EnumServicesStatusW
+jl      loc_406576
+" -> EnumServicesStatusW	 [color=purple];
+	"call    sub_401538
+call    sub_401538
+call    GetServiceDisplayNameW
+call    sub_4063C4
+call    wsprintfW
+call    lstrcatW
+jl      \
+short loc_40656C
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    sub_401538
+call    GetServiceDisplayNameW
+call    sub_4063C4
+call    wsprintfW
+call    lstrcatW
+jl      \
+short loc_40656C
+" -> wsprintfW	 [color=purple];
+	"call    sub_401538
+call    sub_401538
+call    GetServiceDisplayNameW
+call    sub_4063C4
+call    wsprintfW
+call    lstrcatW
+jl      \
+short loc_40656C
+" -> lstrcatW	 [color=purple];
+	"call    sub_401538
+call    sub_401538
+call    GetServiceDisplayNameW
+call    sub_4063C4
+call    wsprintfW
+call    lstrcatW
+jl      \
+short loc_40656C
+" -> GetServiceDisplayNameW	 [color=purple];
+	"call    sub_401538
+call    sub_401538
+call    GetServiceDisplayNameW
+call    sub_4063C4
+call    wsprintfW
+call    lstrcatW
+jl      \
+short loc_40656C
+" -> sub_4063C4	 [color=purple];
+	"call    CloseServiceHandle
+call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    CloseServiceHandle
+call    sub_401438
+" -> CloseServiceHandle	 [color=purple];
+	"call    RegOpenKeyExW
+jz      short loc_4018AC
+" -> RegOpenKeyExW	 [color=purple];
+	"call    sub_4031C0
+jmp     loc_4019AD
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4014D0
+jz      loc_4019AD
+" -> sub_4014D0	 [color=purple];
+	"call    sub_4031C0
+call    sub_4014D0
+jmp     short loc_401949
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_4014D0
+jmp     short loc_401949
+" -> sub_4014D0	 [color=purple];
+	"call    RegEnumKeyExW
+jz      loc_4018EB
+" -> RegEnumKeyExW	 [color=purple];
+	"call    lstrcatW
+call    lstrcatW
+call    lstrlenW
+jle     short loc_401940
+" -> lstrcatW	 [color=purple];
+	"call    lstrcatW
+call    lstrcatW
+call    lstrlenW
+jle     short loc_401940
+" -> lstrlenW	 [color=purple];
+	"call    RegCloseKey
+jz      short loc_4019A0
+" -> RegCloseKey	 [color=purple];
+	"call    sub_401818
+call    lstrlenW
+jnz     short loc_4019FA
+" -> lstrlenW	 [color=purple];
+	"call    sub_401818
+call    lstrlenW
+jnz     short loc_4019FA
+" -> sub_401818	 [color=purple];
+	"call    RegOpenKeyExW
+jnz     loc_401CEC
+" -> RegOpenKeyExW	 [color=purple];
+	"call    sub_4014EC
+call    sub_4031C0
+jz      loc_401CB9
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4014EC
+call    sub_4031C0
+jz      loc_401CB9
+" -> sub_4014EC	 [color=purple];
+	"call    RegCloseKey
+jz      short loc_401CD6
+" -> RegCloseKey	 [color=purple];
+	"call    RegEnumValueA
+call    sub_4014B4
+jz      loc_401CA8
+" -> sub_4014B4	 [color=purple];
+	"call    RegEnumValueA
+call    sub_4014B4
+jz      loc_401CA8
+" -> RegEnumValueA	 [color=purple];
+	"call    RegEnumValueA
+jnz     loc_401C9F
+" -> RegEnumValueA	 [color=purple];
+	"call    sub_4014EC
+call    lstrcatA
+" -> sub_4014EC	 [color=purple];
+	"call    sub_4014EC
+call    lstrcatA
+" -> lstrcatA	 [color=purple];
+	"call    sub_4014EC
+call    wsprintfA
+jmp     loc_401BF8
+" -> wsprintfA	 [color=purple];
+	"call    sub_4014EC
+call    wsprintfA
+jmp     loc_401BF8
+" -> sub_4014EC	 [color=purple];
+	"call    sub_4014EC
+jz      short loc_401C4C
+" -> sub_4014EC	 [color=purple];
+	"call    sub_4014EC
+jl      short loc_401BF8
+" -> sub_4014EC	 [color=purple];
+	"call    sub_4014EC
+call    lstrcpyA
+jmp     short loc_401BF8
+" -> sub_4014EC	 [color=purple];
+	"call    sub_4014EC
+call    lstrcpyA
+jmp     short loc_401BF8
+" -> lstrcpyA	 [color=purple];
+	"call    wsprintfA
+call    lstrcatA
+jnz     short loc_401B88
+" -> wsprintfA	 [color=purple];
+	"call    wsprintfA
+call    lstrcatA
+jnz     short loc_401B88
+" -> lstrcatA	 [color=purple];
+	"call    sub_401538
+call    wsprintfA
+jmp     short loc_401C52
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    wsprintfA
+jmp     short loc_401C52
+" -> wsprintfA	 [color=purple];
+	"call    sub_401438
+call    lstrcatA_0
+call    sub_401438
+jle     short loc_401C9E
+" -> sub_401438	 [color=purple];
+	"call    sub_401438
+call    lstrcatA_0
+call    sub_401438
+jle     short loc_401C9E
+" -> lstrcatA	 [color=purple];
+	"call    sub_401438
+call    lstrcatA_0
+call    sub_401438
+jle     short loc_401C9E
+" -> lstrcatA_0	 [color=purple];
+	"call    sub_4031C0
+call    sub_401438
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    mouse_event
+call    mouse_event
+jmp     short loc_4022A7
+" -> mouse_event	 [color=purple];
+	"call    mouse_event
+call    mouse_event
+" -> mouse_event	 [color=purple];
+	"call    keybd_event
+call    keybd_event
+jnz     short loc_402215
+" -> keybd_event	 [color=purple];
+	"call    sub_405008
+retn
+" -> sub_405008	 [color=purple];
+	"call    WriteFile
+jz      short loc_404FBE
+" -> WriteFile	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_405003
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_405003
+" -> CloseHandle	 [color=purple];
+	"call    sub_4031C0
+jnz     short loc_405003
+" -> sub_4031C0	 [color=purple];
+	"call    sub_402570
+jz      loc_403CF3
+" -> sub_402570	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+jz      short loc_403CA4
+" -> lstrlenW	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+jz      short loc_403CA4
+" -> sub_401448	 [color=purple];
+	"call    lstrcpyW
+call    lstrcatW
+jmp     short loc_403CAF
+" -> lstrcatW	 [color=purple];
+	"call    lstrcpyW
+call    lstrcatW
+jmp     short loc_403CAF
+" -> lstrcpyW	 [color=purple];
+	"call    sub_401438
+jmp     short loc_403CF3
+" -> sub_401438	 [color=purple];
+	"call    sub_403B7C
+jmp     short loc_403CF3
+" -> sub_403B7C	 [color=purple];
+	"call    WriteFile
+jz      short loc_403B3F
+" -> WriteFile	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_403B79
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_403B79
+" -> CloseHandle	 [color=purple];
+	"call    sub_4031C0
+jnz     short loc_403B79
+" -> sub_4031C0	 [color=purple];
+	"call    CloseHandle
+call    sub_4031C0
+jz      short loc_403AC5
+" -> sub_4031C0	 [color=purple];
+	"call    CloseHandle
+call    sub_4031C0
+jz      short loc_403AC5
+" -> CloseHandle	 [color=purple];
+	"call    sub_403DB8
+" -> sub_403DB8	 [color=purple];
+	"call    sub_402570
+jz      loc_4048E2
+" -> sub_402570	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+jz      short loc_404893
+" -> lstrlenW	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+jz      short loc_404893
+" -> sub_401448	 [color=purple];
+	"call    GetTickCount
+call    wsprintfW
+jmp     short loc_40489D
+" -> GetTickCount	 [color=purple];
+	"call    GetTickCount
+call    wsprintfW
+jmp     short loc_40489D
+" -> wsprintfW	 [color=purple];
+	"call    sub_401438
+jmp     short loc_4048E2
+" -> sub_401438	 [color=purple];
+	"call    sub_4046D8
+jmp     short loc_4048E2
+" -> sub_4046D8	 [color=purple];
+	"call    WriteFile
+jz      short loc_40469B
+" -> WriteFile	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_4046D5
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_4046D5
+" -> CloseHandle	 [color=purple];
+	"call    sub_4031C0
+jnz     short loc_4046D5
+" -> sub_4031C0	 [color=purple];
+	"call    CloseHandle
+call    sub_4031C0
+jz      short loc_404824
+" -> sub_4031C0	 [color=purple];
+	"call    CloseHandle
+call    sub_4031C0
+jz      short loc_404824
+" -> CloseHandle	 [color=purple];
+	"call    ShellExecuteW
+jb      short loc_404824
+" -> ShellExecuteW	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    sub_4042D8
+" -> Sleep	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    sub_4042D8
+" -> Sleep	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    sub_4042D8
+" -> sub_403064	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    sub_4042D8
+" -> sub_403064	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    sub_4042D8
+" -> sub_4042D8	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    sub_4042D8
+" -> sub_4042D8	 [color=purple];
+	"call    sub_40176C
+" -> sub_40176C	 [color=purple];
+	"call    sub_403064
+call    ExitProcess_0
+" -> ExitProcess_0	 [color=purple];
+	"call    sub_403064
+call    ExitProcess_0
+" -> sub_403064	 [color=purple];
+	"call    sub_403064
+call    ExitProcess_0
+" -> ExitProcess	 [color=purple];
+	"call    sub_402428
+" -> sub_402428	 [color=purple];
+	"call    ShellExecuteW
+jb      short locret_40442E
+" -> ShellExecuteW	 [color=purple];
+	"call    ExitProcess_0
+" -> ExitProcess_0	 [color=purple];
+	"call    ExitProcess_0
+" -> ExitProcess_0	 [color=purple];
+	"call    ExitProcess_0
+" -> ExitProcess_0	 [color=purple];
+	"call    ExitProcess_0
+" -> ExitProcess	 [color=purple];
+	"call    ExitProcess_0
+" -> ExitProcess	 [color=purple];
+	"call    ExitProcess_0
+" -> ExitProcess	 [color=purple];
+	"call    OpenServiceW
+jz      short loc_4063A6
+" -> OpenServiceW	 [color=purple];
+	"call    CloseServiceHandle
+" -> CloseServiceHandle	 [color=purple];
+	"call    CloseServiceHandle
+" -> CloseServiceHandle	 [color=purple];
+	"call    StartServiceW
+jmp     short loc_4063A0
+" -> StartServiceW	 [color=purple];
+	"call    ControlService
+" -> ControlService	 [color=purple];
+	"call    sub_402D10
+call    CreateThread
+retn
+" -> sub_402D10	 [color=purple];
+	"call    sub_402D10
+call    CreateThread
+retn
+" -> CreateThread	 [color=purple];
+	"call    GetExitCodeProcess
+jnz     short loc_402D84
+" -> GetExitCodeProcess	 [color=purple];
+	"call    WriteFile
+" -> WriteFile	 [color=purple];
+	"call    CreateThread
+retn
+" -> CreateThread	 [color=purple];
+	"call    sub_4014D0
+jz      loc_404B81
+" -> sub_4014D0	 [color=purple];
+	"call    sub_4014D0
+jz      loc_404B79
+" -> sub_4014D0	 [color=purple];
+	"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404A8E
+" -> lstrcatW	 [color=purple];
+	"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404A8E
+" -> lstrcpynW	 [color=purple];
+	"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404A8E
+" -> FindFirstFileW	 [color=purple];
+	"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404A8E
+" -> sub_40493C	 [color=purple];
+	"call    lstrlenW
+jnz     short loc_404A1F
+" -> lstrlenW	 [color=purple];
+	"call    sub_401538
+jnz     short loc_404A73
+" -> sub_401538	 [color=purple];
+	"call    FindNextFileW
+jnz     loc_4049F7
+" -> FindNextFileW	 [color=purple];
+	"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+" -> sub_4031C0	 [color=purple];
+	"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+" -> lstrcatW	 [color=purple];
+	"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+" -> lstrlenW	 [color=purple];
+	"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+" -> lstrcpyW	 [color=purple];
+	"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    lstrlenW
+call    sub_4031C0
+" -> sub_40493C	 [color=purple];
+	"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404B71
+" -> lstrcatW	 [color=purple];
+	"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404B71
+" -> lstrcpynW	 [color=purple];
+	"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404B71
+" -> FindFirstFileW	 [color=purple];
+	"call    lstrcpynW
+call    sub_40493C
+call    lstrcatW
+call    FindFirstFileW
+jz      loc_404B71
+" -> sub_40493C	 [color=purple];
+	"call    lstrlenW
+jnz     short loc_404AF1
+" -> lstrlenW	 [color=purple];
+	"call    lstrcmpW
+jz      short loc_404B56
+" -> lstrcmpW	 [color=purple];
+	"call    FindNextFileW
+jnz     loc_404AD8
+" -> FindNextFileW	 [color=purple];
+	"call    sub_401538
+jz      short loc_404B56
+" -> sub_401538	 [color=purple];
+	"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    sub_404968
+" -> lstrcatW	 [color=purple];
+	"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    sub_404968
+" -> lstrcpyW	 [color=purple];
+	"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    sub_404968
+" -> sub_404968	 [color=purple];
+	"call    lstrcpyW
+call    sub_40493C
+call    lstrcatW
+call    sub_404968
+" -> sub_40493C	 [color=purple];
+	"call    ShellExecuteW
+jbe     short loc_402646
+" -> ShellExecuteW	 [color=purple];
+	"call    sub_4031C0
+jnz     short loc_404786
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_404786
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_404786
+" -> CloseHandle	 [color=purple];
+	"call    htons
+call    inet_addr
+jnz     short loc_4031A1
+" -> htons	 [color=purple];
+	"call    htons
+call    inet_addr
+jnz     short loc_4031A1
+" -> inet_addr	 [color=purple];
+	"call    gethostbyname
+jz      short loc_40319C
+" -> gethostbyname	 [color=purple];
+	"call    connect
+jz      short loc_4031B5
+" -> connect	 [color=purple];
+	"call    sub_403000
+jz      short loc_406FE7
+" -> sub_403000	 [color=purple];
+	"call    sub_401538
+call    sub_403000
+jz      short loc_406FE7
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    sub_403000
+jz      short loc_406FE7
+" -> sub_403000	 [color=purple];
+	"call    sub_40692C
+jmp     short loc_406F74
+" -> sub_40692C	 [color=purple];
+	"call    RegOpenKeyExW
+jnz     loc_401760
+" -> RegOpenKeyExW	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401758
+" -> lstrlenW	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401758
+" -> lstrcpyW	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401758
+" -> RegOpenKeyExW	 [color=purple];
+	"call    lstrlenW
+call    sub_401448
+call    lstrcpyW
+call    RegOpenKeyExW
+jnz     short loc_401758
+" -> sub_401448	 [color=purple];
+	"call    RegCreateKeyW
+call    RegCloseKey
+jmp     short loc_401760
+" -> RegCloseKey	 [color=purple];
+	"call    RegCreateKeyW
+call    RegCloseKey
+jmp     short loc_401760
+" -> RegCreateKeyW	 [color=purple];
+	"call    lstrlenW
+call    RegSetValueExW
+call    RegCloseKey
+" -> lstrlenW	 [color=purple];
+	"call    lstrlenW
+call    RegSetValueExW
+call    RegCloseKey
+" -> RegCloseKey	 [color=purple];
+	"call    lstrlenW
+call    RegSetValueExW
+call    RegCloseKey
+" -> RegSetValueExW	 [color=purple];
+	"call    GetProcAddress
+jz      short loc_404160
+" -> GetProcAddress	 [color=purple];
+	"call    GetModuleHandleA
+jz      short loc_4041EC
+" -> GetModuleHandleA	 [color=purple];
+	"call    GetProcAddress
+jz      short loc_4041EC
+" -> GetProcAddress	 [color=purple];
+	"call    GetCurrentProcess
+call    [esp+2Ch+var_14]
+jnz     short loc_4041EA
+" -> GetCurrentProcess	 [color=purple];
+	"call    sub_401E34
+retn
+" -> sub_401E34	 [color=purple];
+	"call    GetWindowsDirectoryW
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_402419
+" -> lstrlenW	 [color=purple];
+	"call    GetWindowsDirectoryW
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_402419
+" -> lstrcmpA	 [color=purple];
+	"call    GetWindowsDirectoryW
+call    lstrlenW
+call    lstrcmpA
+jz      short loc_402419
+" -> GetWindowsDirectoryW	 [color=purple];
+	"call    sub_402724
+call    sub_402570
+jz      loc_40450A
+" -> sub_402570	 [color=purple];
+	"call    sub_402724
+call    sub_402570
+jz      loc_40450A
+" -> sub_402724	 [color=purple];
+	"call    sub_402724
+call    lstrcmpW
+jz      short loc_4044E3
+" -> lstrcmpW	 [color=purple];
+	"call    sub_402724
+call    lstrcmpW
+jz      short loc_4044E3
+" -> sub_402724	 [color=purple];
+	"call    lstrcatW
+call    sub_402428
+jz      short loc_404501
+" -> lstrcatW	 [color=purple];
+	"call    lstrcatW
+call    sub_402428
+jz      short loc_404501
+" -> sub_402428	 [color=purple];
+	"call    CopyFileW
+jz      short loc_4044D8
+" -> CopyFileW	 [color=purple];
+	"call    ShellExecuteW
+jb      short loc_4044D8
+" -> ShellExecuteW	 [color=purple];
+	"call    sub_401438
+jmp     short loc_404501
+" -> sub_401438	 [color=purple];
+	"call    sub_401538
+call    wsprintfW
+call    sub_4016A8
+jnz     short loc_4024EB
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    wsprintfW
+call    sub_4016A8
+jnz     short loc_4024EB
+" -> wsprintfW	 [color=purple];
+	"call    sub_401538
+call    wsprintfW
+call    sub_4016A8
+jnz     short loc_4024EB
+" -> sub_4016A8	 [color=purple];
+	"call    sub_4016A8
+" -> sub_4016A8	 [color=purple];
+	"call    sub_402300
+jz      short loc_403E6C
+" -> sub_402300	 [color=purple];
+	"call    sub_401448
+jz      short loc_403E6C
+" -> sub_401448	 [color=purple];
+	"call    sub_4022B8
+call    sub_403790
+jz      loc_404008
+" -> sub_4022B8	 [color=purple];
+	"call    sub_4022B8
+call    sub_403790
+jz      loc_404008
+" -> sub_403790	 [color=purple];
+	"call    sub_40394C
+jz      loc_404008
+" -> sub_40394C	 [color=purple];
+	"call    DeleteFileW
+" -> DeleteFileW	 [color=purple];
+	"call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+\
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+call    sub_40394C
+jz      short loc_404015
+" -> sub_40394C	 [color=purple];
+	"call    eax
+call    wsprintfW
+call    sub_4031C0
+jmp     short loc_404015
+" -> sub_4031C0	 [color=purple];
+	"call    eax
+call    wsprintfW
+call    sub_4031C0
+jmp     short loc_404015
+" -> wsprintfW	 [color=purple];
+	"call    sub_4031C0
+jnz     short loc_403C2A
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_403C2A
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_403C2A
+" -> CloseHandle	 [color=purple];
+	"call    GetModuleHandleA
+jz      loc_405A14
+" -> GetModuleHandleA	 [color=purple];
+	"call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+\
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+call    GetProcAddress
+" -> GetProcAddress	 [color=purple];
+	"call    sub_401448
+jmp     short loc_4014A9
+" -> sub_401448	 [color=purple];
+	"call    sub_401448
+jz      short loc_4014A9
+" -> sub_401448	 [color=purple];
+	"call    sub_401510
+call    sub_401438
+" -> sub_401510	 [color=purple];
+	"call    sub_401510
+call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    lstrlenW
+jz      short loc_404962
+" -> lstrlenW	 [color=purple];
+	"call    lstrcpyW
+call    lstrcatW
+call    sub_401438
+" -> lstrcatW	 [color=purple];
+	"call    lstrcpyW
+call    lstrcatW
+call    sub_401438
+" -> lstrcpyW	 [color=purple];
+	"call    lstrcpyW
+call    lstrcatW
+call    sub_401438
+" -> sub_401438	 [color=purple];
+	"call    CreateFileW
+jz      short loc_403DAD
+" -> CreateFileW	 [color=purple];
+	"call    GetFileSize
+call    sub_4014B4
+jz      short loc_403DA7
+" -> sub_4014B4	 [color=purple];
+	"call    GetFileSize
+call    sub_4014B4
+jz      short loc_403DA7
+" -> GetFileSize	 [color=purple];
+	"call    ReadFile
+" -> ReadFile	 [color=purple];
+	"call    LoadResource
+jz      short loc_402346
+" -> LoadResource	 [color=purple];
+	"call    LockResource
+call    SizeofResource
+" -> LockResource	 [color=purple];
+	"call    LockResource
+call    SizeofResource
+" -> SizeofResource	 [color=purple];
+	"call    lstrlenW
+jz      short loc_4022FA
+" -> lstrlenW	 [color=purple];
+	"call    sub_401510
+jnz     loc_40391C
+" -> sub_401510	 [color=purple];
+	"call    VirtualAlloc
+jnz     short loc_403825
+" -> VirtualAlloc	 [color=purple];
+	"call    VirtualAlloc
+" -> VirtualAlloc	 [color=purple];
+	"call    GetProcessHeap
+call    HeapAlloc
+call    VirtualAlloc
+call    VirtualAlloc
+call    sub_401510
+call    sub_403318
+jz      \
+short loc_4038D8
+" -> sub_401510	 [color=purple];
+	"call    GetProcessHeap
+call    HeapAlloc
+call    VirtualAlloc
+call    VirtualAlloc
+call    sub_401510
+call    sub_403318
+jz      \
+short loc_4038D8
+" -> VirtualAlloc	 [color=purple];
+	"call    GetProcessHeap
+call    HeapAlloc
+call    VirtualAlloc
+call    VirtualAlloc
+call    sub_401510
+call    sub_403318
+jz      \
+short loc_4038D8
+" -> GetProcessHeap	 [color=purple];
+	"call    GetProcessHeap
+call    HeapAlloc
+call    VirtualAlloc
+call    VirtualAlloc
+call    sub_401510
+call    sub_403318
+jz      \
+short loc_4038D8
+" -> HeapAlloc	 [color=purple];
+	"call    GetProcessHeap
+call    HeapAlloc
+call    VirtualAlloc
+call    VirtualAlloc
+call    sub_401510
+call    sub_403318
+jz      \
+short loc_4038D8
+" -> sub_403318	 [color=purple];
+	"call    sub_4033DC
+" -> sub_4033DC	 [color=purple];
+	"call    sub_4034A8
+call    sub_4036C8
+jz      short loc_403917
+" -> sub_4034A8	 [color=purple];
+	"call    sub_4034A8
+call    sub_4036C8
+jz      short loc_403917
+" -> sub_4036C8	 [color=purple];
+	"call    sub_403928
+jnz     short loc_4039E6
+" -> sub_403928	 [color=purple];
+	"call    OpenServiceW
+jz      short loc_406405
+" -> OpenServiceW	 [color=purple];
+	"call    QueryServiceStatus
+call    CloseServiceHandle
+" -> CloseServiceHandle	 [color=purple];
+	"call    QueryServiceStatus
+call    CloseServiceHandle
+" -> QueryServiceStatus	 [color=purple];
+	"call    sub_4025E4
+jl      loc_401F94
+" -> sub_4025E4	 [color=purple];
+	"call    sub_4014B4
+jz      loc_401F88      ; jumptable 00401E8F default case
+" -> sub_4014B4	 [color=purple];
+	"call    sub_401538
+call    sub_401510
+ja      loc_401F88      ; jumptable 00401E8F default case
+" -> sub_401538	 [color=purple];
+	"call    sub_401538
+call    sub_401510
+ja      loc_401F88      ; jumptable 00401E8F default case
+" -> sub_401510	 [color=purple];
+	"call    sub_401D50
+jmp     short loc_401F88; jumptable 00401E8F default case
+" -> sub_401D50	 [color=purple];
+	"call    StrToIntW
+jmp     short loc_401F88; jumptable 00401E8F default case
+" -> StrToIntW	 [color=purple];
+	"call    sub_401D70
+jmp     short loc_401F88; jumptable 00401E8F default case
+" -> sub_401D70	 [color=purple];
+	"call    sub_401D50
+" -> sub_401D50	 [color=purple];
+	"call    sub_402508
+call    lstrlenW
+call    sub_401538
+retn
+" -> sub_401538	 [color=purple];
+	"call    sub_402508
+call    lstrlenW
+call    sub_401538
+retn
+" -> lstrlenW	 [color=purple];
+	"call    sub_402508
+call    lstrlenW
+call    sub_401538
+retn
+" -> sub_402508	 [color=purple];
+	"call    ExitProcess
+" -> ExitProcess	 [color=purple];
+	"call    sub_4031C0
+jnz     short loc_4050CC
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_4050CC
+" -> sub_4031C0	 [color=purple];
+	"call    sub_4031C0
+call    CloseHandle
+jmp     short loc_4050CC
+" -> CloseHandle	 [color=purple];
+	"call    GetModuleFileNameW
+" -> GetModuleFileNameW	 [color=purple];
+	"call    recv
+jz      short loc_40304B
+" -> recv	 [color=purple];
+	"call    GetTickCount
+retn    0Ch
+" -> GetTickCount	 [color=purple];
+	"call    sub_402AF8
+jnz     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_402AF8	 [color=purple];
+	"call    sub_404C18
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_404C18	 [color=purple];
+	"call    sub_404C00
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_404C00	 [color=purple];
+	"call    sub_405504
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_405504	 [color=purple];
+	"call    sub_4055F4
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_4055F4	 [color=purple];
+	"call    sub_404D90
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_404D90	 [color=purple];
+	"call    sub_404CF8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_404CF8	 [color=purple];
+	"call    sub_405440
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_405440	 [color=purple];
+	"call    sub_4054D4
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_4054D4	 [color=purple];
+	"call    sub_405478
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_405478	 [color=purple];
+	"call    sub_40540C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_40540C	 [color=purple];
+	"call    sub_40537C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_40537C	 [color=purple];
+	"call    sub_405294
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_405294	 [color=purple];
+	"call    sub_4052FC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_4052FC	 [color=purple];
+	"call    sub_40601C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_40601C	 [color=purple];
+	"call    StrToIntW
+call    sub_405FDC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> StrToIntW	 [color=purple];
+	"call    StrToIntW
+call    sub_405FDC
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_405FDC	 [color=purple];
+	"call    sub_40686C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_40686C	 [color=purple];
+	"call    StrToIntW
+call    sub_40671C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> StrToIntW	 [color=purple];
+	"call    StrToIntW
+call    sub_40671C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_40671C	 [color=purple];
+	"call    StrToIntW
+call    sub_40673C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> StrToIntW	 [color=purple];
+	"call    StrToIntW
+call    sub_40673C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_40673C	 [color=purple];
+	"call    StrToIntW
+call    sub_406758
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> StrToIntW	 [color=purple];
+	"call    StrToIntW
+call    sub_406758
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_406758	 [color=purple];
+	"call    sub_406414
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_406414	 [color=purple];
+	"call    sub_401854
+call    Sleep
+call    sub_4019B8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> Sleep	 [color=purple];
+	"call    sub_401854
+call    Sleep
+call    sub_4019B8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_401854	 [color=purple];
+	"call    sub_401854
+call    Sleep
+call    sub_4019B8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_4019B8	 [color=purple];
+	"call    sub_402204
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_402204	 [color=purple];
+	"call    sub_40522C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_40522C	 [color=purple];
+	"call    sub_4031C0
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_4031C0	 [color=purple];
+	"call    sub_404F3C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_404F3C	 [color=purple];
+	"call    sub_403C34
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_403C34	 [color=purple];
+	"call    sub_403AC8
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_403AC8	 [color=purple];
+	"call    sub_403A64
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_403A64	 [color=purple];
+	"call    sub_404828
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_404828	 [color=purple];
+	"call    sub_404624
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_404624	 [color=purple];
+	"call    sub_404790
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_404790	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    ExitProcess_0
+" -> Sleep	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    ExitProcess_0
+" -> ExitProcess_0	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    ExitProcess_0
+" -> sub_403064	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    ExitProcess_0
+" -> ExitProcess	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    sub_4043F4
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> Sleep	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    sub_4043F4
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> sub_403064	 [color=purple];
+	"call    sub_403064
+call    Sleep
+call    sub_4043F4
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> sub_4043F4	 [color=purple];
+	"call    sub_406348
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> sub_406348	 [color=purple];
+	"call    sub_402FA0
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> sub_402FA0	 [color=purple];
+	"call    sub_402D10      ; jumptable 0040694B case 114
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> sub_402D10	 [color=purple];
+	"call    sub_402D48
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> sub_402D48	 [color=purple];
+	"call    sub_4066CC
+jmp     short loc_406F4F; jumptable 0040694B default case
+" -> sub_4066CC	 [color=purple];
+	"call    sub_403064
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_403064	 [color=purple];
+	"call    sub_40223C
+jmp     loc_406F4F      ; jumptable 0040694B default case
+" -> sub_40223C	 [color=purple];
+	lstrcatA_0 -> lstrcatA	 [color=purple];
+}
